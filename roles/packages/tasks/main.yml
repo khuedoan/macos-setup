@@ -1,0 +1,15 @@
+---
+- name: Install packages
+  homebrew:
+    name:
+      - neovim
+      - nodejs
+      - tmux
+
+- name: Add Homebrew Cask Fonts
+  homebrew_tap:
+    name: homebrew/cask-fonts
+
+- name: Install font
+  homebrew_cask:
+    name: font-sauce-code-pro-nerd-font
