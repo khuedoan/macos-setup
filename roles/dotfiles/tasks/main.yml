@@ -1,7 +1,7 @@
 ---
 - name: Clone dotfiles repository
   git:
-    repo: "https://github.com/khuedoan/macos-setup.git"
+    repo: "https://github.com/khuedoan/dotfiles.git"
     dest: "{{ ansible_env.HOME }}/.dotfiles"
 
 - name: Link config files
