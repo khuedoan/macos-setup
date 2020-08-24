@@ -6,6 +6,10 @@
       - nodejs
       - tmux
 
+- name : Install terminal
+  homebrew_cask:
+    name: iterm2
+
 - name: Add Homebrew Cask Fonts
   homebrew_tap:
     name: homebrew/cask-fonts
