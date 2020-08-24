@@ -2,6 +2,7 @@
 - name: Install packages
   homebrew:
     name:
+      - fzf
       - neovim
       - nodejs
       - tmux
