@@ -8,28 +8,18 @@
       - terraform
       - tmux
 
-- name : Install terminal
-  homebrew_cask:
-    name: iterm2
-
-- name: Add Homebrew Cask Fonts
+- name: Tap cask
   homebrew_tap:
     name: homebrew/cask-fonts
 
-- name: Install font
-  homebrew_cask:
-    name: font-sauce-code-pro-nerd-font
-
-- name: Install Karabiner
-  homebrew_cask:
-    name: karabiner-elements
-
-- name: Install VirtualBox
-  homebrew_cask:
-    name: virtualbox
-
-- name: Install others
+- name: Install casks
   homebrew_cask:
     name: "{{ item }}"
   loop:
+    - font-sauce-code-pro-nerd-font
+    - iterm2
+    - karabiner-elements
+    - puppetlabs/puppet/pdk
+    - puppetlabs/puppet/pe-client-tools
     - puppetlabs/puppet/puppet-bolt
+    - virtualbox
