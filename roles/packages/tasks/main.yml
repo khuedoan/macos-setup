@@ -24,3 +24,4 @@
     - puppetlabs/puppet/puppet-agent
     - puppetlabs/puppet/puppet-bolt
     - virtualbox
+    - vagrant
