@@ -21,5 +21,6 @@
     - karabiner-elements
     - puppetlabs/puppet/pdk
     - puppetlabs/puppet/pe-client-tools
+    - puppetlabs/puppet/puppet-agent
     - puppetlabs/puppet/puppet-bolt
     - virtualbox
