@@ -18,3 +18,7 @@
 - name: Install font
   homebrew_cask:
     name: font-sauce-code-pro-nerd-font
+
+- name: Install Karabiner
+  homebrew_cask:
+    name: karabiner-elements
