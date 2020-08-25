@@ -5,6 +5,7 @@
       - fzf
       - neovim
       - nodejs
+      - terraform
       - tmux
 
 - name : Install terminal
@@ -22,3 +23,7 @@
 - name: Install Karabiner
   homebrew_cask:
     name: karabiner-elements
+
+- name: Install VirtualBox
+  homebrew_cask:
+    name: virtualbox
