@@ -27,3 +27,9 @@
 - name: Install VirtualBox
   homebrew_cask:
     name: virtualbox
+
+- name: Install others
+  homebrew_cask:
+    name: "{{ item }}"
+  loop:
+    - puppetlabs/puppet/puppet-bolt
