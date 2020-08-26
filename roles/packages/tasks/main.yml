@@ -2,7 +2,9 @@
 - name: Install packages
   homebrew:
     name:
+      - aria2
       - fzf
+      - lastpass-cli
       - neovim
       - nodejs
       - terraform
