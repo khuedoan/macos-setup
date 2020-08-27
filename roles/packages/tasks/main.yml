@@ -11,8 +11,10 @@
       - neovim
       - nodejs
       - sops
-      - terraform
+      - tfenv
       - tmux
+      - awscli
+      - azure-cli
 
 - name: Tap cask
   homebrew_tap:
