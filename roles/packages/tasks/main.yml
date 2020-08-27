@@ -4,9 +4,12 @@
     name:
       - aria2
       - fzf
+      - gawk
+      - gpg
       - lastpass-cli
       - neovim
       - nodejs
+      - sops
       - terraform
       - tmux
 
@@ -25,5 +28,6 @@
     - puppetlabs/puppet/pe-client-tools
     - puppetlabs/puppet/puppet-agent
     - puppetlabs/puppet/puppet-bolt
-    - virtualbox
     - vagrant
+    - virtualbox
+    - visual-studio-code
