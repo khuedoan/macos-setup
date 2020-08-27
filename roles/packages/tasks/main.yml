@@ -6,6 +6,7 @@
       - fzf
       - gawk
       - gpg
+      - kubectl
       - lastpass-cli
       - neovim
       - nodejs
