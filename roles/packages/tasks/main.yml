@@ -22,6 +22,7 @@
   homebrew_cask:
     name: "{{ item }}"
   loop:
+    - docker
     - font-sauce-code-pro-nerd-font
     - iterm2
     - karabiner-elements
