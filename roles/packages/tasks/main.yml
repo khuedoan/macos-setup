@@ -28,6 +28,7 @@
     - font-sauce-code-pro-nerd-font
     - iterm2
     - karabiner-elements
+    - lens
     - puppetlabs/puppet/pdk
     - puppetlabs/puppet/pe-client-tools
     - puppetlabs/puppet/puppet-agent
