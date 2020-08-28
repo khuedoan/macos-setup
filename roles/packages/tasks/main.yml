@@ -6,6 +6,7 @@
       - fzf
       - gawk
       - gpg
+      - helm
       - kubectl
       - lastpass-cli
       - neovim
