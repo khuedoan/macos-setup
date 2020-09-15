@@ -11,6 +11,7 @@
       - lastpass-cli
       - neovim
       - nodejs
+      - pipenv
       - sops
       - tfenv
       - tmux
