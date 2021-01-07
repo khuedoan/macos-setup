@@ -24,3 +24,7 @@
     scope: local
     repo: "{{ home }}"
     value: "no"
+
+- name: Install VS Code extensions
+  loop: "{{ lookup('file', '{{ home }}/.config/Code\ -\ OSS/User/extensions.txt').splitlines() }}"
+  command: "code --install-extension {{ item }}"
