@@ -1,30 +1,26 @@
 ---
-- name: Clone dotfiles repository
+
+- name: Init empty dotfiles repo
+  command: "git init"
+  args:
+    chdir: "{{ home }}"
+
+- name: Add remote repository
+  command: "git remote add origin {{ dotfiles_repo }}"
+  args:
+    chdir: "{{ home }}"
+  register: add_remote
+  failed_when: add_remote.rc != 0 and add_remote.rc != 128
+
+- name: Clone dotfiles repo
   git:
-    repo: "https://github.com/khuedoan/dotfiles.git"
-    dest: "{{ ansible_env.HOME }}/.dotfiles"
+    repo: "{{ dotfiles_repo }}"
+    dest: "{{ home }}"
+    update: yes
 
-- name: Create config directories
-  file:
-    path: "{{ ansible_env.HOME }}/{{ item }}"
-    state: directory
-  loop:
-    - .config
-    - .config/nvim
-    - .config/tmux
-
-- name: Link config files
-  file:
-    src: "{{ ansible_env.HOME }}/.dotfiles/{{ item }}"
-    dest: "{{ ansible_env.HOME }}/{{ item }}"
-    state: link
-  loop:
-    - .zshrc
-    - .zsh
-    - .zshenv
-    - .aliases
-    - .hushlogin
-    - .p10k.zsh
-    - .config/nvim/init.vim
-    - .config/nvim/coc-settings.json
-    - .config/tmux/tmux.conf
+- name: Disable show untracked files
+  git_config:
+    name: "status.showUntrackedFiles"
+    scope: local
+    repo: "{{ home }}"
+    value: "no"

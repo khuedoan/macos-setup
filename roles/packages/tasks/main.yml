@@ -1,14 +1,15 @@
 ---
+
 - name: Install packages
   homebrew:
     name:
+      - alacritty
       - aria2
       - fzf
       - gawk
       - gpg
       - helm
       - kubectl
-      - lastpass-cli
       - neovim
       - nodejs
       - pipenv
@@ -28,13 +29,5 @@
   loop:
     - docker
     - font-sauce-code-pro-nerd-font
-    - iterm2
     - karabiner-elements
-    - lens
-    - puppetlabs/puppet/pdk
-    - puppetlabs/puppet/pe-client-tools
-    - puppetlabs/puppet/puppet-agent
-    - puppetlabs/puppet/puppet-bolt
-    - vagrant
-    - virtualbox
     - visual-studio-code
