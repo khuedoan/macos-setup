@@ -6,6 +6,8 @@
     name:
       - alacritty
       - aria2
+      - awscli
+      - azure-cli
       - fzf
       - go
       - neovim
