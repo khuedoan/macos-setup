@@ -2,5 +2,6 @@
 - hosts: localhost
   connection: local
   roles:
-    - role: dotfiles
+    - role: macports
     - role: packages
+    - role: dotfiles

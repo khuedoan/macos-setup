@@ -9,5 +9,5 @@ cd macos-setup
 python3 -m venv .
 . ./bin/activate
 pip install -r requirements.txt
-ansible playbook.yaml
+ansible-playbook --ask-become-pass playbook.yml
 ```

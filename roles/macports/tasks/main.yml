@@ -1,0 +1,12 @@
+---
+
+- name: Download MacPorts
+  get_url:
+    url: https://distfiles.macports.org/MacPorts/MacPorts-2.6.4-10.15-Catalina.pkg
+    dest: /tmp/MacPorts.pkg
+
+- name: Install MacPorts
+  become: yes
+  command:
+    cmd: installer -pkg /tmp/MacPorts.pkg -target /
+    creates: /opt/local/bin/port
