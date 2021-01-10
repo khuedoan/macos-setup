@@ -1,0 +1,11 @@
+---
+
+- name: Install VS Code extensions
+  loop: "{{ lookup('file', '{{ home }}/.config/Code - OSS/User/extensions.txt').splitlines() }}"
+  command: "code --install-extension {{ item }}"
+
+- name: Link VS Code config file to fit macOS
+  file:
+    src: "{{ home }}/.config/Code - OSS/User/settings.json"
+    dest: "{{ home }}/Library/Application\ Support/Code/User/settings.json"
+    state: link
