@@ -1,0 +1,11 @@
+---
+
+- name: Automatically hide and show the dock
+  osx_defaults:
+    domain: com.apple.dock
+    key: autohide
+    value: 1
+
+- name: Reload Dock
+  command:
+    cmd: killall Dock
