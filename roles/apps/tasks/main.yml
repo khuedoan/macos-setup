@@ -23,6 +23,7 @@
   osx_defaults:
     domain: com.apple.universalaccessAuthWarning
     key: "{{ item }}"
+    type: bool
     value: 1
   loop:
    - "2::/Library/Application Support/org.pqrs/Karabiner-Elements/bin/karabiner_grabber"
