@@ -1,11 +1,28 @@
 ---
 
-- name: Install VS Code extensions
-  loop: "{{ lookup('file', '{{ home }}/.config/Code - OSS/User/extensions.txt').splitlines() }}"
-  command: "code --install-extension {{ item }}"
+- name: Download
+  get_url:
+    url: https://github.com/pqrs-org/Karabiner-Elements/releases/download/v13.1.0/Karabiner-Elements-13.1.0.dmg
+    dest: /tmp/Karabiner-Elements.dmg
 
-- name: Link VS Code config file to fit macOS
-  file:
-    src: "{{ home }}/.config/Code - OSS/User/settings.json"
-    dest: "{{ home }}/Library/Application\ Support/Code/User/settings.json"
-    state: link
+- name: Attach the installer
+  command:
+    cmd: hdiutil attach /tmp/Karabiner-Elements.dmg
+
+- name: Install
+  command:
+    cmd: installer -package /Volumes/Karabiner-Elements-13.1.0/Karabiner-Elements.pkg -target CurrentUserHomeDirectory
+
+- name: Detach the installer
+  command:
+    cmd: hdiutil detach /Volumes/Karabiner-Elements-13.1.0
+
+# - name: Install VS Code extensions
+#   loop: "{{ lookup('file', '{{ home }}/.config/Code - OSS/User/extensions.txt').splitlines() }}"
+#   command: "code --install-extension {{ item }}"
+
+# - name: Link VS Code config file to fit macOS
+#   file:
+#     src: "{{ home }}/.config/Code - OSS/User/settings.json"
+#     dest: "{{ home }}/Library/Application\ Support/Code/User/settings.json"
+#     state: link
