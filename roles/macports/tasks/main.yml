@@ -8,5 +8,5 @@
 - name: Install MacPorts
   become: yes
   command:
-    cmd: installer -pkg /tmp/MacPorts.pkg -target /
+    cmd: installer -package /tmp/MacPorts.pkg -target LocalSystem
     creates: /opt/local/bin/port
