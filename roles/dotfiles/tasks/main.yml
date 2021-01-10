@@ -25,6 +25,11 @@
     repo: "~"
     value: "no"
 
+- name: Copy Alacritty config file
+  copy:
+    src: alacritty.yml
+    dest: ~/.config/alacritty/alacritty.yml
+
 - name: Copy Karabiner config file
   copy:
     src: karabiner.json

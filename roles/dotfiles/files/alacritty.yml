@@ -1,0 +1,36 @@
+window:
+  startup_mode: SimpleFullscreen
+
+font:
+  normal:
+    family: SauceCodePro Nerd Font Mono
+    style: Regular
+  size: 14.0
+
+colors:
+  normal:
+    black:     '#171b23'
+    red:       '#be5046'
+    green:     '#98c379'
+    yellow:    '#d19a66'
+    blue:      '#61afef'
+    magenta:   '#c678dd'
+    cyan:      '#56b6c2'
+    white:     '#828997'
+  bright:
+    black:     '#5c6370'
+    red:       '#e06c75'
+    green:     '#98c379'
+    yellow:    '#e5c07b'
+    blue:      '#61afef'
+    magenta:   '#c678dd'
+    cyan:      '#56b6c2'
+    white:     '#abb2bf'
+  primary:
+   background: '#282c34'
+   foreground: '#abb2bf'
+
+key_bindings:
+  - { key: V,   mods: Control|Shift,   action: Paste                  }
+  - { key: C,   mods: Control|Shift,   action: Copy                   }
+  - { key: F,   mods: Command,         action: ToggleSimpleFullscreen }
