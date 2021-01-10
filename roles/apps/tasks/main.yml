@@ -10,12 +10,27 @@
     cmd: hdiutil attach /tmp/Karabiner-Elements.dmg
 
 - name: Install
+  become: yes
   command:
-    cmd: installer -package /Volumes/Karabiner-Elements-13.1.0/Karabiner-Elements.pkg -target CurrentUserHomeDirectory
+    cmd: installer -package /Volumes/Karabiner-Elements-13.1.0/Karabiner-Elements.pkg -target LocalSystem
 
 - name: Detach the installer
   command:
     cmd: hdiutil detach /Volumes/Karabiner-Elements-13.1.0
+
+- name: Allow Karabiner to monitor input
+  osx_defaults:
+    domain: com.apple.universalaccessAuthWarning
+    key: "{{ item }}"
+    value: 1
+  loop:
+   - "2::/Library/Application Support/org.pqrs/Karabiner-Elements/bin/karabiner_grabber"
+   - "2::/Library/Application Support/org.pqrs/Karabiner-Elements/bin/karabiner_observer"
+
+- name: Copy Karabiner config file
+  copy:
+    src: karabiner.json
+    dest: ~/.config/karabiner/karabiner.json
 
 # - name: Install VS Code extensions
 #   loop: "{{ lookup('file', '{{ home }}/.config/Code - OSS/User/extensions.txt').splitlines() }}"
