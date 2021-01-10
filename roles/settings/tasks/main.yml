@@ -4,7 +4,15 @@
   osx_defaults:
     domain: com.apple.dock
     key: autohide
+    type: bool
     value: 1
+
+- name: Put the Docker on the left
+  osx_defaults:
+    domain: com.apple.dock
+    key: orientation
+    type: string
+    value: left
 
 - name: Reload Dock
   command:
