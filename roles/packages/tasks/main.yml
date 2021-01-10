@@ -20,3 +20,4 @@
     src: https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/SourceCodePro.zip
     dest: /Library/Fonts
     remote_src: yes
+    creates: "/Library/Fonts/Sauce Code Pro Black Nerd Font Complete.ttf"
