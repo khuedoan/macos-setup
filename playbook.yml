@@ -1,6 +1,6 @@
 ---
-- hosts: localhost
-  connection: local
+
+- hosts: all
   roles:
     - role: packages
     - role: settings

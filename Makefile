@@ -9,4 +9,4 @@ init:
 
 run:
 	. .venv/bin/activate
-	ansible-playbook --ask-become-pass playbook.yml
+	ansible-playbook --ask-become-pass --inventory hosts.ini playbook.yml
