@@ -1,23 +1,29 @@
 ---
 
 - name: Install packages
-  become: yes
-  macports:
+  homebrew:
     name:
-      - alacritty
       - aria2
+      - awscli
+      - azure-cli
       - fzf
-      - go
+      - gawk
+      - gpg
+      - helm
+      - kubectl
       - neovim
-      - nnn
-      - npm6
-      - ripgrep
+      - nodejs
+      - pipenv
+      - sops
+      - terragrunt
+      - tfenv
       - tmux
 
-- name: Install Nerd Fonts
-  become: yes
-  unarchive:
-    src: https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/SourceCodePro.zip
-    dest: /Library/Fonts
-    remote_src: yes
-    creates: "/Library/Fonts/Sauce Code Pro Black Nerd Font Complete.ttf"
+- name: Install casks
+  homebrew_cask:
+    name:
+      - alacritty
+      - docker
+      - homebrew/cask-fonts/font-sauce-code-pro-nerd-font
+      - karabiner-elements
+      - visual-studio-code
