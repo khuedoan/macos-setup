@@ -9,13 +9,10 @@
 
 ## Usage
 
+
 ```sh
-xcode-select --install
-
-SRCDIR="$HOME/.local/src/macos-setup"
-
-git clone https://github.com/khuedoan/macos-setup "$SRCDIR"
-cd "$SRCDIR"
+git clone https://github.com/khuedoan/macos-setup ~/.local/src/macos-setup
+cd ~/.local/src/macos-setup
 
 make
 ```
