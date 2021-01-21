@@ -6,6 +6,7 @@
       - aria2
       - awscli
       - azure-cli
+      - bitwarden-cli
       - fzf
       - gawk
       - gpg
