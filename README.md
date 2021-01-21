@@ -9,10 +9,8 @@
 
 ## Usage
 
+Clone this repository and run the playbook:
 
 ```sh
-git clone https://github.com/khuedoan/macos-setup ~/.local/src/macos-setup
-cd ~/.local/src/macos-setup
-
 make
 ```
