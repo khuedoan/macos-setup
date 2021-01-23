@@ -26,4 +26,4 @@
       - alacritty
       - docker
       - homebrew/cask-fonts/font-sauce-code-pro-nerd-font
-      - vscodium
+      - visual-studio-code
