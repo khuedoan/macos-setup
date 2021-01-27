@@ -25,5 +25,5 @@
     name:
       - alacritty
       - docker
-      - homebrew/cask-fonts/font-sauce-code-pro-nerd-font
+      - homebrew/cask-fonts/font-fira-code-nerd-font
       - visual-studio-code
