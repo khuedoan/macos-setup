@@ -1,26 +1,4 @@
 ---
 
-- name: Automatically hide and show the dock
-  osx_defaults:
-    domain: com.apple.dock
-    key: autohide
-    type: bool
-    value: 1
-
-- name: Put the Docker on the left
-  osx_defaults:
-    domain: com.apple.dock
-    key: orientation
-    type: string
-    value: left
-
-- name: Show battery percent
-  osx_defaults:
-    domain: com.apple.menuextra.battery
-    key: ShowPercent
-    type: string
-    value: YES
-
-- name: Reload Dock
-  command:
-    cmd: killall Dock
+- include_tasks: dock.yml
+- include_tasks: finder.yml
