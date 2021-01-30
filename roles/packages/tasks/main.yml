@@ -24,6 +24,7 @@
   homebrew_cask:
     name:
       - alacritty
+      - bitwarden
       - docker
       - homebrew/cask-fonts/font-fira-code-nerd-font
       - visual-studio-code
