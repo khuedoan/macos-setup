@@ -16,7 +16,6 @@
       - nodejs
       - pipenv
       - sops
-      - terragrunt
       - tfenv
       - tmux
 
