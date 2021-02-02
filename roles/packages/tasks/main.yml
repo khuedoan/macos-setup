@@ -25,5 +25,6 @@
       - alacritty
       - bitwarden
       - docker
+      - firefox
       - homebrew/cask-fonts/font-fira-code-nerd-font
       - visual-studio-code
