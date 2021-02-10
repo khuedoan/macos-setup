@@ -13,6 +13,7 @@
       - helm
       - kubectl
       - neovim
+      - nnn
       - nodejs
       - pipenv
       - sops
@@ -27,4 +28,5 @@
       - docker
       - firefox
       - homebrew/cask-fonts/font-fira-code-nerd-font
+      - karabiner-elements
       - visual-studio-code
