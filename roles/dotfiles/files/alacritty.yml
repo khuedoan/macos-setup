@@ -3,9 +3,9 @@ window:
 
 font:
   normal:
-    family: SauceCodePro Nerd Font Mono
+    family: FiraCode Nerd Font Mono
     style: Regular
-  size: 14.0
+  size: 13.0
 
 colors:
   normal:
@@ -49,10 +49,8 @@ key_bindings:
   - { key: K,      mods: Command,       chars: "\x1bk"                 }
   - { key: L,      mods: Command,       chars: "\x1bl"                 }
   - { key: M,      mods: Command,       chars: "\x1bm"                 }
-  - { key: N,      mods: Command,       chars: "\x1bn"                 }
   - { key: O,      mods: Command,       chars: "\x1bo"                 }
   - { key: P,      mods: Command,       chars: "\x1bp"                 }
-  - { key: Q,      mods: Command,       chars: "\x1bq"                 }
   - { key: R,      mods: Command,       chars: "\x1br"                 }
   - { key: S,      mods: Command,       chars: "\x1bs"                 }
   - { key: T,      mods: Command,       chars: "\x1bt"                 }
