@@ -10,3 +10,4 @@
 - name: Reload Finder
   command:
     cmd: killall Finder
+  ignore_errors: yes

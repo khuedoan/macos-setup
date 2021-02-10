@@ -16,9 +16,11 @@
       - nnn
       - nodejs
       - pipenv
+      - ripgrep
       - sops
       - tfenv
       - tmux
+      - tree
 
 - name: Install casks
   homebrew_cask:
