@@ -32,4 +32,4 @@
       - homebrew/cask-fonts/font-fira-code-nerd-font
       - karabiner-elements
       - multipass
-      - vscodium
+      - visual-studio-code
