@@ -11,6 +11,7 @@
       - gawk
       - gpg
       - helm
+      - k3d
       - kubectl
       - neovim
       - nnn
