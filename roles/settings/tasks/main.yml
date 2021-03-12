@@ -1,4 +1,3 @@
 ---
 
 - include_tasks: dock.yml
-- include_tasks: finder.yml
