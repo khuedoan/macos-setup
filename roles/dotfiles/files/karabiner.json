@@ -12,7 +12,6 @@
                 "conditions": [
                   {
                     "bundle_identifiers": [
-                      "^com\\.microsoft\\.VSCode",
                       "^io\\.alacritty$"
                     ],
                     "type": "frontmost_application_if"
@@ -48,7 +47,6 @@
                 "conditions": [
                   {
                     "bundle_identifiers": [
-                      "^com\\.microsoft\\.VSCode",
                       "^io\\.alacritty$"
                     ],
                     "type": "frontmost_application_unless"

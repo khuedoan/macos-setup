@@ -42,13 +42,3 @@
   copy:
     src: "karabiner.json"
     dest: "~/.config/karabiner/karabiner.json"
-
-- name: Install VS Code extensions
-  command: "code --install-extension {{ item }}"
-  loop: "{{ lookup('file', '~/.config/Code - OSS/User/extensions.txt').splitlines() }}"
-
-- name: Link VS Code config file to fit macOS
-  file:
-    src: "~/.config/Code - OSS/User/settings.json"
-    dest: "~/Library/Application Support/Code/User/settings.json"
-    state: link
