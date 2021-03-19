@@ -35,3 +35,7 @@
       - homebrew/cask-fonts/font-fira-code-nerd-font
       - karabiner-elements
       - multipass
+
+- name: Install yabai scripting additions
+  become: yes
+  command: "yabai --install-sa"
