@@ -12,6 +12,8 @@
       - gpg
       - helm
       - k3d
+      - koekeishiya/homebrew-formulae/skhd
+      - koekeishiya/homebrew-formulae/yabai
       - kubectl
       - neovim
       - nnn

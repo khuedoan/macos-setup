@@ -33,12 +33,26 @@
     - "~/.config/alacritty"
     - "~/.config/karabiner"
 
-- name: Copy Alacritty config file
-  copy:
-    src: "alacritty.yml"
+- name: Link Alacritty config file
+  file:
+    src: "{{ role_path }}/files/alacritty.yml"
     dest: "~/.config/alacritty/alacritty.yml"
+    state: link
 
-- name: Copy Karabiner config file
-  copy:
-    src: "karabiner.json"
+- name: Link Karabiner config file
+  file:
+    src: "{{ role_path }}/files/karabiner.json"
     dest: "~/.config/karabiner/karabiner.json"
+    state: link
+
+- name: Link yabai config file
+  file:
+    src: "{{ role_path }}/files/yabairc"
+    dest: "~/.yabairc"
+    state: link
+
+- name: Link skhd config file
+  file:
+    src: "{{ role_path }}/files/skhdrc"
+    dest: "~/.skhdrc"
+    state: link
