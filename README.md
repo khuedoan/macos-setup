@@ -2,7 +2,7 @@
 
 ## Features
 
-- Install Homebrew
+- Install MacPorts
 - Install CLI and GUI packages
 - Change system settings
 - Install [my dotfiles](https://github.com/khuedoan/dotfiles)

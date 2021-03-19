@@ -1,10 +1,15 @@
 ---
 
 - name: Install packages
-  homebrew:
+  macports:
     name:
+      - alacritty
+      - helm-3.4
+      - terraform-0.12
+      - kubectl-1.18
       - aria2
       - awscli
+      - go
       - azure-cli
       - bitwarden-cli
       - fzf
@@ -15,21 +20,11 @@
       - kubectl
       - neovim
       - nnn
-      - nodejs
+      - npm6
       - pipenv
       - ripgrep
       - sops
       - tfenv
       - tmux
       - tree
-
-- name: Install casks
-  homebrew_cask:
-    name:
-      - alacritty
-      - bitwarden
-      - brave-browser
-      - docker
-      - homebrew/cask-fonts/font-fira-code-nerd-font
-      - karabiner-elements
-      - multipass
+    update_cache: yes
