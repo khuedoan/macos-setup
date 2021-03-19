@@ -56,3 +56,9 @@
     src: "{{ role_path }}/files/skhdrc"
     dest: "~/.skhdrc"
     state: link
+
+- name: Start services
+  command: "brew services start {{ item }}"
+  loop:
+    - yabai
+    - skhd
