@@ -22,3 +22,6 @@ cmd + shift - 1 : yabai -m window --space 1
 cmd + shift - 2 : yabai -m window --space 2
 cmd + shift - 3 : yabai -m window --space 3
 cmd + shift - 4 : yabai -m window --space 4
+
+# apps
+cmd - return : alacritty
