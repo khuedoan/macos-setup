@@ -6,17 +6,9 @@
       "complex_modifications": {
         "rules": [
           {
-            "description": "Post Esc if Caps is tapped, Control if held in Terminal",
+            "description": "Post Esc if Caps is tapped, Control if held",
             "manipulators": [
               {
-                "conditions": [
-                  {
-                    "bundle_identifiers": [
-                      "^io\\.alacritty$"
-                    ],
-                    "type": "frontmost_application_if"
-                  }
-                ],
                 "from": {
                   "key_code": "caps_lock",
                   "modifiers": {
@@ -28,41 +20,6 @@
                 "to": [
                   {
                     "key_code": "left_control",
-                    "lazy": true
-                  }
-                ],
-                "to_if_alone": [
-                  {
-                    "key_code": "escape"
-                  }
-                ],
-                "type": "basic"
-              }
-            ]
-          },
-          {
-            "description": "Post Esc if Caps is tapped, Command if held in other apps",
-            "manipulators": [
-              {
-                "conditions": [
-                  {
-                    "bundle_identifiers": [
-                      "^io\\.alacritty$"
-                    ],
-                    "type": "frontmost_application_unless"
-                  }
-                ],
-                "from": {
-                  "key_code": "caps_lock",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "left_command",
                     "lazy": true
                   }
                 ],
