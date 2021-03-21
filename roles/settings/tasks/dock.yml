@@ -14,12 +14,12 @@
     type: string
     value: left
 
-- name: Show battery percent
+- name: Disable automatically rearrange Spaces
   osx_defaults:
-    domain: com.apple.menuextra.battery
-    key: ShowPercent
-    type: string
-    value: YES
+    domain: com.apple.dock
+    key: mru-spaces
+    type: bool
+    value: 0
 
 - name: Reload Dock
   command:
