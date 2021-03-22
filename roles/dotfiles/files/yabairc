@@ -15,5 +15,6 @@ yabai -m config window_opacity on
 yabai -m config normal_window_opacity 0.75
 
 # ignore
+yabai -m rule --add manage=off app="^Docker Desktop$"
 yabai -m rule --add manage=off app="^System Preferences$"
 yabai -m rule --add manage=off app="^Viscosity$"
