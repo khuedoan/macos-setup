@@ -34,6 +34,8 @@
       - docker
       - homebrew/cask-fonts/font-fira-code-nerd-font
       - karabiner-elements
+      - vagrant
+      - virtualbox
       - viscosity
 
 - name: Install yabai scripting additions
