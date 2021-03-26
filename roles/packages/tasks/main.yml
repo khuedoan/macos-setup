@@ -30,12 +30,10 @@
   homebrew_cask:
     name:
       - alacritty
-      - bitwarden
       - brave-browser
       - docker
       - homebrew/cask-fonts/font-fira-code-nerd-font
       - karabiner-elements
-      - multipass
       - viscosity
 
 - name: Install yabai scripting additions
