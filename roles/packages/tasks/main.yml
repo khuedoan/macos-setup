@@ -9,6 +9,7 @@
       - bitwarden-cli
       - fzf
       - gawk
+      - gh
       - go
       - gpg
       - helm
