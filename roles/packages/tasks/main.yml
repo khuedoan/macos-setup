@@ -12,7 +12,9 @@
       - gh
       - go
       - gpg
+      - hammerspoon
       - helm
+      - jq
       - k3d
       - kubectl
       - neovim
