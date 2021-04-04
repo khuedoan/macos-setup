@@ -32,7 +32,6 @@
   loop:
     - "~/.config/alacritty"
     - "~/.config/karabiner"
-    - "~/.hammerspoon"
 
 - name: Link Alacritty config file
   file:
@@ -44,12 +43,6 @@
   file:
     src: "{{ role_path }}/files/karabiner.json"
     dest: "~/.config/karabiner/karabiner.json"
-    state: link
-
-- name: Link Hammerspoon config file
-  file:
-    src: "{{ role_path }}/files/hammerspoon.lua"
-    dest: "~/.hammerspoon/init.lua"
     state: link
 
 - name: Install VS Code extensions
