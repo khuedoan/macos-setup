@@ -23,6 +23,7 @@
       - sops
       - tfenv
       - tmux
+      - translate-shell
       - tree
 
 - name: Install casks
