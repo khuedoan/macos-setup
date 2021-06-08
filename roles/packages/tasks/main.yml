@@ -15,6 +15,7 @@
       - helm
       - k3d
       - kubectl
+      - kustomize
       - neovim
       - nnn
       - nodejs
