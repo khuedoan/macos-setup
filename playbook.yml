@@ -1,8 +1,10 @@
----
-
 - hosts: all
   roles:
-    - { role: geerlingguy.homebrew, tags: homebrew }
-    - { role: packages, tags: packages }
-    - { role: settings, tags: settings }
-    - { role: dotfiles, tags: dotfiles }
+    - role: geerlingguy.mac.homebrew
+      tags: homebrew
+    - role: packages
+      tags: packages
+    - role: settings
+      tags: settings
+    - role: dotfiles
+      tags: dotfiles
