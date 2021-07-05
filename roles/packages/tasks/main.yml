@@ -1,5 +1,3 @@
----
-
 - name: Install packages
   homebrew:
     name:
@@ -33,7 +31,6 @@
     name:
       - alacritty
       - bitwarden
-      - brave-browser
       - docker
       - gswitch
       - homebrew/cask-fonts/font-fira-code-nerd-font
@@ -42,4 +39,3 @@
       - vagrant
       - virtualbox
       - viscosity
-      - visual-studio-code

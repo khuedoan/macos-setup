@@ -1,5 +1,3 @@
----
-
 - name: Show battery percent
   osx_defaults:
     domain: com.apple.menuextra.battery

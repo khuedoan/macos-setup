@@ -1,5 +1,3 @@
----
-
 - name: Automatically hide and show the dock
   osx_defaults:
     domain: com.apple.dock
