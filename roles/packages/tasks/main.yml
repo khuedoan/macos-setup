@@ -6,6 +6,7 @@
       - aria2
       - awscli
       - azure-cli
+      - bat
       - bitwarden-cli
       - fzf
       - gawk
