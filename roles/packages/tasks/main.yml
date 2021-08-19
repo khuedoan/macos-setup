@@ -5,32 +5,31 @@
       - awscli
       - azure-cli
       - bat
-      - bitwarden-cli
       - fzf
       - gawk
       - gh
       - go
       - gpg
       - helm
-      - k3d
       - kubectl
       - kustomize
       - neovim
       - nnn
       - nodejs
-      - pipenv
+      - pass
+      - pass-otp
       - ripgrep
       - sops
       - tfenv
       - tmux
       - translate-shell
       - tree
+      - yarn
 
 - name: Install casks
   homebrew_cask:
     name:
       - alacritty
-      - bitwarden
       - docker
       - gswitch
       - homebrew/cask-fonts/font-fira-code-nerd-font
