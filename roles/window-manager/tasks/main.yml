@@ -3,12 +3,7 @@
     name:
       - koekeishiya/homebrew-formulae/skhd
       - koekeishiya/homebrew-formulae/yabai
-
-- name: Install the scripting addition
-  become: yes
-  command:
-    cmd: yabai --install-sa
-    creates: /Library/ScriptingAdditions/yabai.osax # https://github.com/koekeishiya/yabai/blob/master/src/osax/sa.m#L120
+  notify: Install the scripting addition
 
 - name: Allow current user to load the scripting addition as root without password
   become: yes
@@ -19,10 +14,16 @@
     create: yes
     validate: /usr/sbin/visudo -cf %s
 
-- name: Start yabai service
-  command: "brew services start {{ item }}"
-  register: window_manager_services
-  changed_when: "'already started' not in window_manager_services.stdout"
-  loop:
-    - yabai
-    - skhd
+- name: Copy yabai config file
+  copy:
+    src: yabairc
+    dest: ~/.yabairc
+    mode: preserve
+  notify: Restart yabai service
+
+- name: Copy skhd config file
+  copy:
+    src: skhdrc
+    dest: ~/.skhdrc
+    mode: preserve
+  notify: Restart skhd service

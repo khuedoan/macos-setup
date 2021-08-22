@@ -1,0 +1,15 @@
+- name: Install the scripting addition
+  become: yes
+  command:
+    cmd: yabai --install-sa
+    creates: /Library/ScriptingAdditions/yabai.osax # https://github.com/koekeishiya/yabai/blob/master/src/osax/sa.m#L120
+
+- name: Restart yabai service
+  command: brew services restart yabai
+  register: yabai_service
+  changed_when: "'already started' not in yabai_service.stdout"
+
+- name: Restart skhd service
+  command: brew services restart skhd
+  register: skhd_service
+  changed_when: "'already started' not in skhd_service.stdout"

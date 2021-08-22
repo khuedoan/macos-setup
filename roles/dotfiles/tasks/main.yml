@@ -40,7 +40,3 @@
       dest: ~/.config/alacritty/alacritty.yml
     - src: karabiner.json
       dest: ~/.config/karabiner/karabiner.json
-    - src: yabairc
-      dest: ~/.yabairc
-    - src: skhdrc
-      dest: ~/.skhdrc
