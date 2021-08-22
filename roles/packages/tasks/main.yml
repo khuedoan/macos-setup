@@ -25,6 +25,7 @@
       - tmux
       - translate-shell
       - tree
+      - watch
       - yarn
 
 - name: Install casks
