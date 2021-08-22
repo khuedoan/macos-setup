@@ -31,17 +31,16 @@
     - "~/.config/alacritty"
     - "~/.config/karabiner"
 
-- name: Link macOS specific config files
-  file:
-    src: "{{ role_path }}/files/{{ item.file }}"
-    dest: "{{ item.path }}"
-    state: link
+- name: Copy macOS specific config files
+  copy:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
   loop:
-    - file: alacritty.yml
-      path: ~/.config/alacritty/alacritty.yml
-    - file: karabiner.json
-      path: ~/.config/karabiner/karabiner.json
-    - file: yabairc
-      path: ~/.yabairc
-    - file: skhdrc
-      path: ~/.skhdrc
+    - src: alacritty.yml
+      dest: ~/.config/alacritty/alacritty.yml
+    - src: karabiner.json
+      dest: ~/.config/karabiner/karabiner.json
+    - src: yabairc
+      dest: ~/.yabairc
+    - src: skhdrc
+      dest: ~/.skhdrc
