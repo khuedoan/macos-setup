@@ -4,6 +4,7 @@
     key: autohide
     type: bool
     value: 1
+  notify: Reload Dock
 
 - name: Disable automatically rearrange Spaces
   osx_defaults:
@@ -11,7 +12,4 @@
     key: mru-spaces
     type: bool
     value: 0
-
-- name: Reload Dock
-  command:
-    cmd: killall Dock
+  notify: Reload Dock
