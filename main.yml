@@ -8,3 +8,5 @@
       tags: packages
     - role: settings
       tags: settings
+    - role: window-manager
+      tags: window-manager

@@ -1,0 +1,28 @@
+- name: Install window manager and hotkey daemon
+  homebrew:
+    name:
+      - koekeishiya/homebrew-formulae/skhd
+      - koekeishiya/homebrew-formulae/yabai
+
+- name: Install the scripting addition
+  become: yes
+  command:
+    cmd: yabai --install-sa
+    creates: /Library/ScriptingAdditions/yabai.osax # https://github.com/koekeishiya/yabai/blob/master/src/osax/sa.m#L120
+
+- name: Allow current user to load the scripting addition as root without password
+  become: yes
+  lineinfile:
+    dest: /private/etc/sudoers.d/yabai
+    line: "{{ ansible_env.USER }} ALL = (root) NOPASSWD: /usr/local/bin/yabai --load-sa"
+    state: present
+    create: yes
+    validate: /usr/sbin/visudo -cf %s
+
+- name: Start yabai service
+  command: "brew services start {{ item }}"
+  register: window_manager_services
+  changed_when: "'already started' not in window_manager_services.stdout"
+  loop:
+    - yabai
+    - skhd
