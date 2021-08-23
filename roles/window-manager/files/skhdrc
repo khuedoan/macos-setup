@@ -35,5 +35,10 @@ lalt + shift - 8 : yabai -m window --space 8
 lalt + shift - 9 : yabai -m window --space 9
 lalt + shift - 0 : yabai -m window --space 10
 
+# focused window actions
+lalt + shift - q : yabai -m window --close
+lalt - f         : yabai -m window --toggle zoom-fullscreen
+
 # apps
 lalt - return : alacritty
+lalt - w      : open /Applications/Safari.app
