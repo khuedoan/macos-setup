@@ -40,5 +40,5 @@ lalt + shift - q : yabai -m window --close
 lalt - f         : yabai -m window --toggle zoom-fullscreen
 
 # apps
-lalt - return : alacritty
+lalt - return : open -n /Applications/Alacritty.app
 lalt - w      : open /Applications/Safari.app
