@@ -21,3 +21,11 @@
       - watch
       - yarn
     update_cache: yes
+
+- name: Install Nerd Fonts
+  become: yes
+  unarchive:
+    src: https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip
+    dest: /Library/Fonts
+    remote_src: yes
+    creates: "/Library/Fonts/Fira Code Regular Nerd Font Complete.ttf"
