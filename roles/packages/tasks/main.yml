@@ -7,6 +7,7 @@
       - bat
       - fzf
       - gh
+      - go
       - moreutils
       - neovim
       - nnn
