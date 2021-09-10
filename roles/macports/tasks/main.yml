@@ -4,7 +4,7 @@
   git:
     repo: https://github.com/macports/macports-base.git
     dest: ~/.local/src/macport-base
-    version: v2.6.4
+    version: v2.7.1
 
 - name: Config MacPorts
   command: ./configure --prefix={{ ansible_env.HOME }}/.local --with-applications-dir={{ ansible_env.HOME }}/.local/Applications --with-install-user=kdoan --with-install-group=staff --without-startupitems
