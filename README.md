@@ -5,7 +5,7 @@
 - Install MacPorts
 - Install CLI and GUI packages
 - Change system settings
-- Install [my dotfiles](https://github.com/khuedoan/dotfiles)
+- Install [my dotfiles](https://github.com/khuedoan/dotfiles) and some [macOS specific configuration files](./roles/dotfiles/files)
 
 ## Usage
 

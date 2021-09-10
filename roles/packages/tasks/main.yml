@@ -1,30 +1,23 @@
----
-
 - name: Install packages
   macports:
     name:
       - alacritty
-      - helm-3.4
-      - terraform-0.12
-      - kubectl-1.18
       - aria2
-      - awscli
-      - go
-      - azure-cli
-      - bitwarden-cli
+      - bat
       - fzf
-      - gawk
-      - gpg
-      - helm
-      - k3d
-      - kubectl
+      - gh
+      - moreutils
       - neovim
       - nnn
-      - npm6
-      - pipenv
+      - nodejs14
+      - npm7
+      - pass
+      - pass-otp
       - ripgrep
-      - sops
       - tfenv
       - tmux
+      - translate-shell
       - tree
+      - watch
+      - yarn
     update_cache: yes

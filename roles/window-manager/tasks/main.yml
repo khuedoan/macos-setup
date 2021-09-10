@@ -1,0 +1,29 @@
+- name: Install window manager and hotkey daemon
+  homebrew:
+    name:
+      - koekeishiya/homebrew-formulae/skhd
+      - koekeishiya/homebrew-formulae/yabai
+  notify: Install the scripting addition
+
+- name: Allow current user to load the scripting addition as root without password
+  become: yes
+  lineinfile:
+    dest: /private/etc/sudoers.d/yabai
+    line: "{{ ansible_env.USER }} ALL = (root) NOPASSWD: /usr/local/bin/yabai --load-sa"
+    state: present
+    create: yes
+    validate: /usr/sbin/visudo -cf %s
+
+- name: Copy yabai config file
+  copy:
+    src: yabairc
+    dest: ~/.yabairc
+    mode: preserve
+  notify: Restart yabai service
+
+- name: Copy skhd config file
+  copy:
+    src: skhdrc
+    dest: ~/.skhdrc
+    mode: preserve
+  notify: Restart skhd service

@@ -1,11 +1,19 @@
 window:
-  startup_mode: SimpleFullscreen
+  decorations: none
+  startup_mode: Maximized
+
+scrolling:
+  multiplier: 1
+
+cursor:
+  style:
+    blinking: On
 
 font:
   normal:
     family: FiraCode Nerd Font Mono
     style: Regular
-  size: 13.0
+  size: 12.0
 
 colors:
   normal:
@@ -31,6 +39,7 @@ colors:
    foreground: '#abb2bf'
 
 key_bindings:
+  - { key: Return, mods: Option|Shift,  action: SpawnNewInstance       }
   - { key: F,      mods: Command|Shift, action: ToggleSimpleFullscreen }
   - { key: C,      mods: Control|Shift, action: Copy                   }
   - { key: V,      mods: Control|Shift, action: Paste                  }
@@ -38,7 +47,6 @@ key_bindings:
   - { key: Return, mods: Command,       chars: "\x1b\r"                }
   - { key: A,      mods: Command,       chars: "\x1ba"                 }
   - { key: B,      mods: Command,       chars: "\x1bb"                 }
-  - { key: C,      mods: Command,       chars: "\x1bc"                 }
   - { key: D,      mods: Command,       chars: "\x1bd"                 }
   - { key: E,      mods: Command,       chars: "\x1be"                 }
   - { key: F,      mods: Command,       chars: "\x1bf"                 }
@@ -55,7 +63,6 @@ key_bindings:
   - { key: S,      mods: Command,       chars: "\x1bs"                 }
   - { key: T,      mods: Command,       chars: "\x1bt"                 }
   - { key: U,      mods: Command,       chars: "\x1bu"                 }
-  - { key: V,      mods: Command,       chars: "\x1bv"                 }
   - { key: W,      mods: Command,       chars: "\x1bw"                 }
   - { key: X,      mods: Command,       chars: "\x1bx"                 }
   - { key: Y,      mods: Command,       chars: "\x1by"                 }

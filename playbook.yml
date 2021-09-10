@@ -1,8 +1,0 @@
----
-
-- hosts: all
-  roles:
-    - { role: macports, tags: macports }
-    - { role: packages, tags: packages }
-    - { role: settings, tags: settings }
-    - { role: dotfiles, tags: dotfiles }

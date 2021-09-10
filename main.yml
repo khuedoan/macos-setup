@@ -1,0 +1,10 @@
+- hosts: all
+  roles:
+    - role: dotfiles
+      tags: dotfiles
+    - role: macports
+      tags: macports
+    - role: packages
+      tags: packages
+    - role: settings
+      tags: settings

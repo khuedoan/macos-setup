@@ -1,0 +1,6 @@
+- name: Show battery percent
+  osx_defaults:
+    domain: com.apple.menuextra.battery
+    key: ShowPercent
+    type: string
+    value: YES
