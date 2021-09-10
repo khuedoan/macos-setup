@@ -1,26 +1,10 @@
----
-
-- name: Get MacPorts source
-  git:
-    repo: https://github.com/macports/macports-base.git
-    dest: ~/.local/src/macport-base
-    version: v2.7.1
-
-- name: Config MacPorts
-  command: ./configure --prefix={{ ansible_env.HOME }}/.local --with-applications-dir={{ ansible_env.HOME }}/.local/Applications --with-install-user=kdoan --with-install-group=staff --without-startupitems
-  args:
-    chdir: ~/.local/src/macport-base
-
-- name: Build MacPorts
-  make:
-    chdir: ~/.local/src/macport-base
+- name: Download MacPorts
+  get_url:
+    url: https://github.com/macports/macports-base/releases/download/v2.7.1/MacPorts-2.7.1-10.15-Catalina.pkg
+    dest: /tmp/MacPorts.pkg
 
 - name: Install MacPorts
-  make:
-    chdir: ~/.local/src/macport-base
-    target: install
-
-- name: Clean up
-  make:
-    chdir: ~/.local/src/macport-base
-    target: distclean
+  become: yes
+  command:
+    cmd: installer -package /tmp/MacPorts.pkg -target LocalSystem
+    creates: /opt/local/bin/port
