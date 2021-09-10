@@ -9,7 +9,6 @@
       - gawk
       - gh
       - go
-      - gpg
       - helm
       - jq
       - kubectl
@@ -34,10 +33,6 @@
     name:
       - alacritty
       - docker
-      - gswitch
       - homebrew/cask-fonts/font-fira-code-nerd-font
-      - karabiner-elements
       - macs-fan-control
-      - vagrant
-      - virtualbox
       - viscosity
