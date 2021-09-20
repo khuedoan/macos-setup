@@ -9,6 +9,7 @@
       - gawk
       - gh
       - go
+      - gpg
       - helm
       - jq
       - kubectl
