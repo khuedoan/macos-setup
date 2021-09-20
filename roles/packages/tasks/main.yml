@@ -28,6 +28,7 @@
       - tree
       - watch
       - yarn
+      - zoxide
 
 - name: Install casks
   homebrew_cask:
