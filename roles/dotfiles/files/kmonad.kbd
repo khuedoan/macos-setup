@@ -1,6 +1,6 @@
 (defcfg
-  input  (device-file "/dev/input/by-path/platform-i8042-serio-0-event-kbd")
-  output (uinput-sink "Internal keyboard")
+  input  (iokit-name)
+  output (kext)
   fallthrough true
   allow-cmd false
 )
@@ -11,11 +11,11 @@
 )
 
 (defsrc
-  esc  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
   caps a    s    d    f    g    h    j    k    l    ;    '    ret
   lsft z    x    c    v    b    n    m    ,    .    /    rsft
-  lctl lmet lalt           spc            ralt rctl
+  lctl      lalt           spc            ralt rctl
 )
 
 (deflayer qwerty
@@ -23,7 +23,7 @@
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
   @xcp a    s    d    f    g    h    j    k    l    ;    '    ret
   lsft z    x    c    v    b    n    m    ,    .    /    rsft
-  lctl lalt lmet           spc            @fn  rctl
+  lalt      lmet           spc            @fn  rctl
 )
 
 (deflayer function
@@ -31,5 +31,5 @@
   _    4    5    6    _    _    _    _    _    _    _    _    _    _
   _    7    8    9    _    _    left down up   rght _    _    _
   _    _    0    _    _    _    _    _    _    _    _    _
-  _    _    _              _              _    _
+  _         _              _              _    _
 )
