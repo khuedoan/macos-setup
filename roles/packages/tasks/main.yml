@@ -27,6 +27,7 @@
       - translate-shell
       - tree
       - watch
+      - wget
       - yarn
       - zoxide
 
