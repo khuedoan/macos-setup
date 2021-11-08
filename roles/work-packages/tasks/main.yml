@@ -1,0 +1,13 @@
+- name: Install packages
+  homebrew:
+    name:
+      - awscli
+      - azure-cli
+      - pass
+      - pass-otp
+
+- name: Install casks
+  homebrew_cask:
+    name:
+      - docker
+      - viscosity

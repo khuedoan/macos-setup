@@ -2,8 +2,6 @@
   homebrew:
     name:
       - aria2
-      - awscli
-      - azure-cli
       - bat
       - fzf
       - gawk
@@ -18,8 +16,6 @@
       - neovim
       - nnn
       - nodejs
-      - pass
-      - pass-otp
       - ripgrep
       - sops
       - tfenv
@@ -35,7 +31,23 @@
   homebrew_cask:
     name:
       - alacritty
-      - docker
       - homebrew/cask-fonts/font-fira-code-nerd-font
       - macs-fan-control
-      - viscosity
+
+- name: Create missing directories for config files
+  file:
+    path: "{{ item }}"
+    state: directory
+  loop:
+    - "~/.config/alacritty"
+    - "~/.config/karabiner"
+
+- name: Copy macOS specific config files
+  copy:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+  loop:
+    - src: alacritty.yml
+      dest: ~/.config/alacritty/alacritty.yml
+    - src: karabiner.json
+      dest: ~/.config/karabiner/karabiner.json
