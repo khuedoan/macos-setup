@@ -6,3 +6,4 @@
       tags: homebrew
     - role: packages
     - role: settings
+    - role: kmonad
