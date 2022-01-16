@@ -16,3 +16,7 @@ run:
 dotfiles:
 	. .venv/bin/activate \
 		&& ansible-playbook --inventory hosts.ini --tags dotfiles main.yml
+
+work:
+	. .venv/bin/activate \
+		&& ansible-playbook --ask-become-pass --inventory hosts.ini work.yml
