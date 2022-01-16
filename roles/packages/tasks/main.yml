@@ -3,6 +3,7 @@
     name:
       - aria2
       - bat
+      - coreutils
       - fzf
       - gawk
       - gh
