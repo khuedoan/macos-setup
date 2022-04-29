@@ -3,11 +3,10 @@
     name:
       - awscli
       - azure-cli
-      - pass
-      - pass-otp
 
 - name: Install casks
   homebrew_cask:
     name:
+      - bitwarden
       - docker
       - viscosity

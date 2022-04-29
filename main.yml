@@ -2,8 +2,5 @@
   roles:
     - role: khuedoan.workstation.dotfiles
       tags: dotfiles
-    - role: geerlingguy.mac.homebrew
-      tags: homebrew
     - role: packages
     - role: settings
-    - role: kmonad

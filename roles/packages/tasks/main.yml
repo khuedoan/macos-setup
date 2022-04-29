@@ -33,7 +33,7 @@
     name:
       - alacritty
       - homebrew/cask-fonts/font-fira-code-nerd-font
-      - macs-fan-control
+      - karabiner-elements
 
 - name: Create missing directories for config files
   file:
