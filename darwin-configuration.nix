@@ -9,17 +9,16 @@
     curl
     docker
     fzf
-    # gh
+    gh
     git
-    # go
-    # gpg
-    # kubernetes-helm
+    gnupg
+    go
     jq
-    # kubectl
-    # kustomize
+    kubectl
+    kubernetes-helm
+    kustomize
     neovim
-    # nnn
-    nodePackages.npm
+    nnn
     nodejs
     ripgrep
     tmux
@@ -27,6 +26,10 @@
     unzip
     watch
     zoxide
+
+    (with nodePackages;
+      npm
+    )
   ];
 
   fonts = {
@@ -52,6 +55,7 @@
     ];
     casks = [
       "alacritty"
+      "docker"
     ];
   };
 
