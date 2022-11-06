@@ -11,7 +11,8 @@ default: build
 	sudo rm -i /etc/nix/nix.conf
 	mkdir /tmp/nix-darwin
 	cd /tmp/nix-darwin \
-		&& nix-build https://github.com/LnL7/nix-darwin/archive/master.tar.gz -A installer
+		&& . /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh \
+		&& nix-build https://github.com/LnL7/nix-darwin/archive/master.tar.gz -A installer \
 		&& ./result/bin/darwin-installer
 
 /opt/homebrew/bin/brew:
