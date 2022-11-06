@@ -1,3 +1,0 @@
-- include_tasks: dock.yml
-- include_tasks: menu.yml
-- include_tasks: viscosity.yml

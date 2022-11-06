@@ -1,6 +1,0 @@
-- name: Remember Viscosity username
-  osx_defaults:
-    domain: com.viscosityvpn.Viscosity
-    key: RememberUsername
-    type: bool
-    value: 1

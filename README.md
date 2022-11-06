@@ -2,15 +2,12 @@
 
 ## Features
 
-- Install Homebrew
-- Install CLI and GUI packages
-- Change system settings
-- Install [my dotfiles](https://github.com/khuedoan/dotfiles) and some [macOS specific configuration files](./roles/dotfiles/files)
+- TODO
 
 ## Usage
 
-Clone this repository and run the playbook:
-
 ```sh
+git clone https://github.com/khuedoan/macos-setup ~/.nixpkgs
+cd ~/nixpkgs
 make
 ```

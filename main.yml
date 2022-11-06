@@ -1,6 +1,0 @@
-- hosts: all
-  roles:
-    - role: khuedoan.workstation.dotfiles
-      tags: dotfiles
-    - role: packages
-    - role: settings

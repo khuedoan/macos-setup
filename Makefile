@@ -1,29 +1,29 @@
 .POSIX:
+.PHONY: default build uninstall
 
-default: init run
+default: build
 
-init:
-	python3 -m venv .venv \
-		&& . .venv/bin/activate \
-		&& pip3 install --upgrade pip \
-		&& pip3 install -r requirements.txt \
-		&& ansible-galaxy install -r requirements.yml
+/nix:
+	curl -L https://nixos.org/nix/install -o /tmp/nix-install.sh
+	less /tmp/nix-install.sh
+	sh /tmp/nix-install.sh
+	@echo "Remove the default Nix configuration file to use the one from nix-darwin"
+	sudo rm -i /etc/nix/nix.conf
+	mkdir /tmp/nix-darwin
+	cd /tmp/nix-darwin \
+		&& nix-build https://github.com/LnL7/nix-darwin/archive/master.tar.gz -A installer
+		&& ./result/bin/darwin-installer
 
-/tmp/brew-install.sh:
-	curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh > /tmp/brew-install.sh
-	chmod +x /tmp/brew-install.sh
+~/.git:
+	cd ~ \
+		&& git init \
+		&& git config status.showUntrackedFiles no \
+		&& git remote add origin https://github.com/khuedoan/dotfiles \
+		&& git pull origin master
 
-/usr/local/bin/brew: /tmp/brew-install.sh
-	bash -c /tmp/brew-install.sh
+build: /nix ~/.git
+	darwin-rebuild switch
 
-run: /usr/local/bin/brew
-	. .venv/bin/activate \
-		&& ansible-playbook --ask-become-pass --inventory hosts.ini main.yml
-
-dotfiles:
-	. .venv/bin/activate \
-		&& ansible-playbook --inventory hosts.ini --tags dotfiles main.yml
-
-work: /usr/local/bin/brew
-	. .venv/bin/activate \
-		&& ansible-playbook --ask-become-pass --inventory hosts.ini work.yml
+uninstall:
+	nix-build https://github.com/LnL7/nix-darwin/archive/master.tar.gz -A uninstaller
+	./result/bin/darwin-uninstaller

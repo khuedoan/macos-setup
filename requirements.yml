@@ -1,5 +1,0 @@
-collections:
-  - name: geerlingguy.mac
-  - name: https://github.com/khuedoan/ansible-collection-workstation.git
-    type: git
-    version: master
