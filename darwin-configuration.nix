@@ -19,6 +19,21 @@
     zoxide
   ];
 
+  # Homebrew packages
+  homebrew = {
+    enable = true;
+    onActivation.cleanup = "zap";
+    taps = [
+      "homebrew/cask"
+    ];
+    brews = [
+      # "foobar"
+    ];
+    casks = [
+      "alacritty"
+    ];
+  };
+
   # Auto upgrade nix package and the daemon service.
   services.nix-daemon.enable = true;
   # nix.package = pkgs.nix;

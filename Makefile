@@ -14,6 +14,11 @@ default: build
 		&& nix-build https://github.com/LnL7/nix-darwin/archive/master.tar.gz -A installer
 		&& ./result/bin/darwin-installer
 
+/opt/homebrew/bin/brew:
+	curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh -o /tmp/brew-install.sh
+	less /tmp/brew-install.sh
+	bash /tmp/brew-install.sh
+
 ~/.git:
 	cd ~ \
 		&& git init \
@@ -21,7 +26,7 @@ default: build
 		&& git remote add origin https://github.com/khuedoan/dotfiles \
 		&& git pull origin master
 
-build: /nix ~/.git
+build: /nix /opt/homebrew/bin/brew ~/.git
 	darwin-rebuild switch
 
 uninstall:
