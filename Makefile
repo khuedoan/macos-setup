@@ -28,7 +28,7 @@ default: build
 		&& git pull origin master
 
 build: /nix /opt/homebrew/bin/brew ~/.git
-	darwin-rebuild switch
+	/run/current-system/sw/bin/darwin-rebuild switch
 
 uninstall:
 	nix-build https://github.com/LnL7/nix-darwin/archive/master.tar.gz -A uninstaller

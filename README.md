@@ -8,7 +8,7 @@
 
 ```sh
 git clone https://github.com/khuedoan/macos-setup ~/.nixpkgs
-cd ~/nixpkgs
+cd ~/.nixpkgs
 make
 ```
 
