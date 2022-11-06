@@ -43,6 +43,25 @@
     ];
   };
 
+  system.defaults = {
+    # alf = {
+    #   globalstate = 1;
+    # };
+    dock = {
+      autohide = true;
+      minimize-to-application = true;
+      mru-spaces = false;
+      showhidden = true;
+      # magnification = true;
+    };
+    NSGlobalDomain = {
+      NSAutomaticCapitalizationEnabled = false;
+      NSAutomaticDashSubstitutionEnabled = false;
+      NSAutomaticPeriodSubstitutionEnabled = false;
+      NSAutomaticQuoteSubstitutionEnabled = false;
+      NSAutomaticSpellingCorrectionEnabled = false;
+    };
+  };
   # Auto upgrade nix package and the daemon service.
   services.nix-daemon.enable = true;
   # nix.package = pkgs.nix;
