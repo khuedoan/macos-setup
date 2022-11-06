@@ -4,18 +4,28 @@
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
+    aria
     cargo
     curl
+    docker
     fzf
+    # gh
     git
+    # go
+    # gpg
+    # kubernetes-helm
     jq
+    # kubectl
+    # kustomize
     neovim
+    # nnn
     nodePackages.npm
     nodejs
     ripgrep
     tmux
     tree
     unzip
+    watch
     zoxide
   ];
 
@@ -23,7 +33,9 @@
     fontDir.enable = true;
     fonts = [
       (pkgs.nerdfonts.override {
-        fonts = ["FiraCode"];
+        fonts = [
+          "FiraCode"
+        ];
       })
     ];
   };
@@ -69,10 +81,21 @@
 
   # Auto upgrade nix package and the daemon service.
   services.nix-daemon.enable = true;
-  # nix.package = pkgs.nix;
+
+  nix.settings = {
+    experimental-features = [
+      "nix-command"
+      # "flakes"
+    ];
+    allowed-users = [
+      "@admin"
+    ];
+  };
 
   # Create /etc/zshrc that loads the nix-darwin environment.
   programs.zsh.enable = true;
+
+  security.pam.enableSudoTouchIdAuth = true;
 
   # Used for backwards compatibility, please read the changelog before changing.
   # $ darwin-rebuild changelog
