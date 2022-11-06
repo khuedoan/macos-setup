@@ -60,15 +60,14 @@
   };
 
   system.defaults = {
-    # alf = {
-    #   globalstate = 1;
-    # };
+    alf = {
+      globalstate = 1;
+    };
     dock = {
       autohide = true;
       minimize-to-application = true;
       mru-spaces = false;
       showhidden = true;
-      # magnification = true;
     };
     NSGlobalDomain = {
       NSAutomaticCapitalizationEnabled = false;
