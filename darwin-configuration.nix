@@ -1,6 +1,8 @@
 { config, pkgs, ... }:
 
 {
+  imports = [ <home-manager/nix-darwin> ];
+
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
@@ -103,4 +105,16 @@
   # Used for backwards compatibility, please read the changelog before changing.
   # $ darwin-rebuild changelog
   system.stateVersion = 4;
+
+  # TODO clean up
+  home-manager = {
+    useUserPackages = true;
+    useGlobalPkgs = true;
+    users.khuedoan = { pkgs, lib, ... }: {
+      home.stateVersion = "22.05";
+      programs.home-manager.enable = true;
+      home.file.".config/alacritty/alacritty.yml".text = builtins.readFile ./alacritty.yml;
+      home.file.".config/karabiner/karabiner.json".text = builtins.readFile ./karabiner.json;
+    };
+  };
 }
