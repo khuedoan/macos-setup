@@ -9,7 +9,7 @@
     aria
     cargo
     curl
-    docker
+    direnv
     fzf
     gh
     git
@@ -21,6 +21,8 @@
     kustomize
     neovim
     nnn
+    nodePackages.npm
+    nodePackages.yarn
     nodejs
     ripgrep
     tmux
@@ -28,10 +30,6 @@
     unzip
     watch
     zoxide
-
-    (with nodePackages;
-      npm
-    )
   ];
 
   fonts = {
@@ -57,6 +55,7 @@
     ];
     casks = [
       "alacritty"
+      "brave-browser"
       "docker"
     ];
   };
