@@ -8,7 +8,7 @@ default: build
 	less /tmp/nix-install.sh
 	sh /tmp/nix-install.sh
 	@echo "Remove the default Nix configuration file to use the one from nix-darwin"
-	sudo rm -i /etc/nix/nix.conf
+	cat /etc/nix/nix.conf && sudo rm -i /etc/nix/nix.conf
 	mkdir /tmp/nix-darwin
 	cd /tmp/nix-darwin \
 		&& . /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh \
@@ -37,3 +37,12 @@ build: /nix /opt/homebrew/bin/brew ~/.git
 uninstall:
 	nix-build https://github.com/LnL7/nix-darwin/archive/master.tar.gz -A uninstaller
 	./result/bin/darwin-uninstaller
+
+# TODO
+# nix-channel --add https://github.com/nix-community/home-manager/archive/release-22.05.tar.gz home-manager
+# nix-channel --update
+# Fix alacritty Command + H
+# sudo pmset -a lowpowermode 0
+# fix markdown preview
+# flakes
+# keyboard backlight

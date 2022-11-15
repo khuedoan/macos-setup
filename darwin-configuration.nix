@@ -7,6 +7,7 @@
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
     aria
+    docker
     cargo
     curl
     direnv
@@ -30,6 +31,12 @@
     unzip
     watch
     zoxide
+    colima
+
+    # TODO
+    (google-cloud-sdk.withExtraComponents [
+      pkgs.google-cloud-sdk.components.gke-gcloud-auth-plugin
+    ])
   ];
 
   fonts = {
@@ -48,15 +55,18 @@
     enable = true;
     onActivation.cleanup = "zap";
     taps = [
-      "homebrew/cask"
+      { name = "homebrew/cask"; }
+      # TODO ARM support
+      # { name = "kde-mac/kde"; clone_target = "https://invent.kde.org/packaging/homebrew-kde.git"; force_auto_update = true; }
     ];
     brews = [
       # "foobar"
     ];
     casks = [
       "alacritty"
-      "brave-browser"
-      "docker"
+      # "brave-browser"
+      # TODO ARM support
+      # "kdeconnect"
     ];
   };
 
@@ -79,6 +89,11 @@
     };
   };
 
+  # TODO clean up
+  # system.activationScripts.dirtyFixes.text = ''
+  #   sudo pmset -a lowpowermode 1
+  # '';
+
   services.karabiner-elements = {
     enable = true;
   };
@@ -86,14 +101,18 @@
   # Auto upgrade nix package and the daemon service.
   services.nix-daemon.enable = true;
 
-  nix.settings = {
-    experimental-features = [
-      "nix-command"
-      # "flakes"
-    ];
-    allowed-users = [
-      "@admin"
-    ];
+  nix = {
+    # configureBuildUsers = true;
+    settings = {
+      auto-optimise-store = true;
+      experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
+      allowed-users = [
+        "@admin"
+      ];
+    };
   };
 
   # Create /etc/zshrc that loads the nix-darwin environment.
@@ -111,14 +130,14 @@
   system.stateVersion = 4;
 
   # TODO clean up
-  home-manager = {
-    useUserPackages = true;
-    useGlobalPkgs = true;
-    users.khuedoan = { pkgs, lib, ... }: {
-      home.stateVersion = "22.05";
-      programs.home-manager.enable = true;
-      home.file.".config/alacritty/alacritty.yml".text = builtins.readFile ./alacritty.yml;
-      home.file.".config/karabiner/karabiner.json".text = builtins.readFile ./karabiner.json;
-    };
-  };
+  # home-manager = {
+  #   useUserPackages = true;
+  #   useGlobalPkgs = true;
+  #   users.khuedoan = { pkgs, lib, ... }: {
+  #     home.stateVersion = "22.05";
+  #     programs.home-manager.enable = true;
+  #     home.file.".config/alacritty/alacritty.yml".text = builtins.readFile ./alacritty.yml;
+  #     home.file.".config/karabiner/karabiner.json".text = builtins.readFile ./karabiner.json;
+  #   };
+  # };
 }
