@@ -7,10 +7,11 @@
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
     aria
-    docker
     cargo
+    colima
     curl
     direnv
+    docker
     fzf
     gh
     git
@@ -31,7 +32,8 @@
     unzip
     watch
     zoxide
-    colima
+
+    (pass.withExtensions (ext: with ext; [pass-otp]))
 
     # TODO
     (google-cloud-sdk.withExtraComponents [
@@ -65,6 +67,9 @@
     casks = [
       "alacritty"
       # "brave-browser"
+      "firefox"
+      "syncthing"
+      "zerotier-one"
       # TODO ARM support
       # "kdeconnect"
     ];
@@ -90,9 +95,9 @@
   };
 
   # TODO clean up
-  # system.activationScripts.dirtyFixes.text = ''
-  #   sudo pmset -a lowpowermode 1
-  # '';
+  system.activationScripts.extraUserActivation.text = ''
+    sudo pmset -a lowpowermode 1
+  '';
 
   services.karabiner-elements = {
     enable = true;
