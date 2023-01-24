@@ -128,14 +128,14 @@
   system.stateVersion = 4;
 
   # TODO clean up
-  # home-manager = {
-  #   useUserPackages = true;
-  #   useGlobalPkgs = true;
-  #   users.khuedoan = { pkgs, lib, ... }: {
-  #     home.stateVersion = "22.05";
-  #     programs.home-manager.enable = true;
-  #     home.file.".config/alacritty/alacritty.yml".text = builtins.readFile ./alacritty.yml;
-  #     home.file.".config/karabiner/karabiner.json".text = builtins.readFile ./karabiner.json;
-  #   };
-  # };
+  home-manager = {
+    useUserPackages = true;
+    useGlobalPkgs = true;
+    users.khuedoan = { pkgs, lib, ... }: {
+      home.stateVersion = "22.05";
+      programs.home-manager.enable = true;
+      home.file.".config/alacritty/alacritty.yml".text = builtins.readFile ./alacritty.yml;
+      home.file.".config/karabiner/karabiner.json".text = builtins.readFile ./karabiner.json;
+    };
+  };
 }

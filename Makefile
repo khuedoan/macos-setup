@@ -9,6 +9,8 @@ default: build
 	sh /tmp/nix-install.sh
 	@echo "Remove the default Nix configuration file to use the one from nix-darwin"
 	cat /etc/nix/nix.conf && sudo rm -i /etc/nix/nix.conf
+	nix-channel --add https://github.com/nix-community/home-manager/archive/release-22.05.tar.gz home-manager
+	nix-channel --update
 	mkdir /tmp/nix-darwin
 	cd /tmp/nix-darwin \
 		&& . /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh \
@@ -39,10 +41,5 @@ uninstall:
 	./result/bin/darwin-uninstaller
 
 # TODO
-# nix-channel --add https://github.com/nix-community/home-manager/archive/release-22.05.tar.gz home-manager
-# nix-channel --update
 # Fix alacritty Command + H
-# sudo pmset -a lowpowermode 0
-# fix markdown preview
-# flakes
 # keyboard backlight
