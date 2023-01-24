@@ -4,7 +4,7 @@
   imports = [ <home-manager/nix-darwin> ];
 
   # List packages installed in system profile. To search by name, run:
-  # $ nix-env -qaP | grep wget
+  # $ nix-env -qaP | grep curl
   environment.systemPackages = with pkgs; [
     aria
     cargo
@@ -33,12 +33,9 @@
     watch
     zoxide
 
-    (pass.withExtensions (ext: with ext; [pass-otp]))
-
-    # TODO
-    (google-cloud-sdk.withExtraComponents [
-      pkgs.google-cloud-sdk.components.gke-gcloud-auth-plugin
-    ])
+    (pass.withExtensions (ext: with ext; [
+      pass-otp
+    ]))
   ];
 
   fonts = {
@@ -58,20 +55,16 @@
     onActivation.cleanup = "zap";
     taps = [
       { name = "homebrew/cask"; }
-      # TODO ARM support
-      # { name = "kde-mac/kde"; clone_target = "https://invent.kde.org/packaging/homebrew-kde.git"; force_auto_update = true; }
     ];
     brews = [
       # "foobar"
     ];
     casks = [
       "alacritty"
-      # "brave-browser"
+      "brave-browser"
       "firefox"
+      "steam"
       "syncthing"
-      "zerotier-one"
-      # TODO ARM support
-      # "kdeconnect"
     ];
   };
 
