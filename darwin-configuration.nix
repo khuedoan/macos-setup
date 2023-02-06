@@ -21,6 +21,7 @@
     kubectl
     kubernetes-helm
     kustomize
+    mosh
     neovim
     nnn
     nodePackages.npm
