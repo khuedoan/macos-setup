@@ -27,6 +27,8 @@
     nodePackages.npm
     nodePackages.yarn
     nodejs
+    pinentry
+    rbw
     ripgrep
     tmux
     tree
@@ -62,10 +64,7 @@
     ];
     casks = [
       "alacritty"
-      "brave-browser"
-      "firefox"
-      "steam"
-      "syncthing"
+      "visual-studio-code"
     ];
   };
 
@@ -145,7 +144,7 @@
     useUserPackages = true;
     useGlobalPkgs = true;
     users.khuedoan = { pkgs, lib, ... }: {
-      home.stateVersion = "22.05";
+      home.stateVersion = "22.11";
       programs.home-manager.enable = true;
       home.file.".config/alacritty/alacritty.yml".text = builtins.readFile ./alacritty.yml;
       home.file.".config/karabiner/karabiner.json".text = builtins.readFile ./karabiner.json;
