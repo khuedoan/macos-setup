@@ -86,6 +86,18 @@
       NSAutomaticQuoteSubstitutionEnabled = false;
       NSAutomaticSpellingCorrectionEnabled = false;
     };
+    CustomUserPreferences = {
+      "com.apple.Safari" = {
+        AlwaysRestoreSessionAtLaunch = true;
+        AutoOpenSafeDownloads = false;
+        EnableNarrowTabs = false;
+        IncludeDevelopMenu = true;
+        NeverUseBackgroundColorInToolbar = true;
+        ShowFullURLInSmartSearchField = true;
+        ShowOverlayStatusBar = true;
+        ShowStandaloneTabBar = false;
+      };
+    };
   };
 
   # TODO clean up
