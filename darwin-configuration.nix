@@ -65,6 +65,7 @@
     casks = [
       "alacritty"
       "visual-studio-code"
+      "zerotier-one"
     ];
   };
 
