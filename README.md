@@ -10,8 +10,8 @@
 ## Usage
 
 ```sh
-git clone https://github.com/khuedoan/macos-setup ~/.nixpkgs
-cd ~/.nixpkgs
+git clone https://github.com/khuedoan/macos-setup macos-setup
+cd macos-setup
 make
 ```
 
