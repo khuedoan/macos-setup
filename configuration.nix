@@ -39,6 +39,10 @@
     ]))
   ];
 
+  environment.systemPath = [
+    config.homebrew.brewPrefix # TODO https://github.com/LnL7/nix-darwin/issues/596
+  ];
+
   fonts = {
     fontDir.enable = true;
     fonts = [
