@@ -4,10 +4,13 @@
 default: build
 
 /nix:
-	curl -L https://nixos.org/nix/install -o /tmp/nix-install.sh
-	sh /tmp/nix-install.sh
+	curl -L https://nixos.org/nix/install | sh
 	# TODO https://github.com/LnL7/nix-darwin/issues/149
-	cat /etc/nix/nix.conf && sudo rm -i /etc/nix/nix.conf
+	sudo rm /etc/nix/nix.conf
+
+/run/current-system/sw/bin/darwin-rebuild:
+	nix-build https://github.com/LnL7/nix-darwin/archive/master.tar.gz -A installer
+	./result/bin/darwin-installer
 
 /opt/homebrew/bin/brew:
 	curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh -o /tmp/brew-install.sh
@@ -24,6 +27,6 @@ default: build
 		&& git pull origin master \
 		&& git remote set-url origin git@github.com:khuedoan/dotfiles
 
-build: /nix /opt/homebrew/bin/brew ~/.git
-	nix --experimental-features 'nix-command flakes' build ./\#darwinConfigurations.MacBookAir.system
+build: /nix /run/current-system/sw/bin/darwin-rebuild /opt/homebrew/bin/brew ~/.git
+	nix --experimental-features 'nix-command flakes' build ./\#darwinConfigurations.$(shell hostname -s).system
 	./result/sw/bin/darwin-rebuild switch --flake .
