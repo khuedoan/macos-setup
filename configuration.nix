@@ -82,6 +82,9 @@
       showhidden = true;
     };
     NSGlobalDomain = {
+      AppleInterfaceStyle = "Dark";
+      AppleKeyboardUIMode = 3;
+      ApplePressAndHoldEnabled = false;
       NSAutomaticCapitalizationEnabled = false;
       NSAutomaticDashSubstitutionEnabled = false;
       NSAutomaticPeriodSubstitutionEnabled = false;
