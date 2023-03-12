@@ -10,11 +10,11 @@ default: build
 
 /run/current-system/sw/bin/darwin-rebuild:
 	/nix/var/nix/profiles/default/bin/nix-build https://github.com/LnL7/nix-darwin/archive/master.tar.gz -A installer
-	./result/bin/darwin-installer
+	yes | ./result/bin/darwin-installer
 
 /opt/homebrew/bin/brew:
 	curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh -o /tmp/brew-install.sh
-	bash /tmp/brew-install.sh
+	NONINTERACTIVE=1 bash /tmp/brew-install.sh
 
 ~/.ssh/id_ed25519:
 	ssh-keygen -t ed25519 -f "$@"
