@@ -9,6 +9,9 @@
 
 ## Usage
 
+- Change the hostname or update the config to match the hostname
+- Go to **Settings -> Security & Privacy -> Privacy -> Full Disk Access** and allow the Terminal app
+
 ```sh
 git clone https://github.com/khuedoan/macos-setup macos-setup
 cd macos-setup
