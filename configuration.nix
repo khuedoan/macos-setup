@@ -66,6 +66,9 @@
     ];
     casks = [
       "alacritty"
+      "brave-browser"
+      "firefox"
+      "utm"
       "visual-studio-code"
       "zerotier-one"
     ];
