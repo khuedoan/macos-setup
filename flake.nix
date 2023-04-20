@@ -3,7 +3,7 @@
 
   inputs = {
     nixpkgs = {
-      url = "github:nixos/nixpkgs/nixpkgs-22.11-darwin";
+      url = "github:nixos/nixpkgs/nixpkgs-unstable";
     };
     darwin = {
       url = "github:lnl7/nix-darwin/master";
@@ -16,13 +16,23 @@
   };
 
   outputs = { self, nixpkgs, darwin, home-manager }: {
-    darwinConfigurations."MacBookAir" = darwin.lib.darwinSystem {
-      system = "aarch64-darwin";
-      modules = [
-        ./configuration.nix
-        home-manager.darwinModules.home-manager
+    darwinConfigurations = {
+      "MacBookAir" = darwin.lib.darwinSystem {
+        system = "aarch64-darwin";
+        modules = [
+          ./configuration.nix
+          home-manager.darwinModules.home-manager
         ];
-      inputs = { inherit nixpkgs darwin home-manager; };
+        inputs = { inherit nixpkgs darwin home-manager; };
+      };
+      "SGN-C715CYXQ92" = darwin.lib.darwinSystem {
+        system = "aarch64-darwin";
+        modules = [
+          ./configuration.nix
+          home-manager.darwinModules.home-manager
+        ];
+        inputs = { inherit nixpkgs darwin home-manager; };
+      };
     };
   };
 }
