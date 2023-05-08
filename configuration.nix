@@ -65,6 +65,7 @@
       # "foobar"
     ];
     casks = [
+      "alacritty" # TODO https://github.com/neovim/neovim/issues/3344
       "brave-browser"
       "firefox"
       "kitty"
@@ -155,6 +156,7 @@
     users.khuedoan = { pkgs, lib, ... }: {
       home.stateVersion = "22.11";
       programs.home-manager.enable = true;
+      home.file.".config/alacritty/alacritty.yml".text = builtins.readFile ./files/alacritty.yml;
       home.file.".config/karabiner/karabiner.json".text = builtins.readFile ./files/karabiner.json;
       home.file.".config/kitty/kitty.d/macos.conf".text = builtins.readFile ./files/kitty.conf;
     };
