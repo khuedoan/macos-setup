@@ -73,6 +73,10 @@
       "visual-studio-code"
       "zerotier-one"
     ];
+    masApps = {
+      # Need to be signed into the Mac App Store
+      "Bitwarden" = 1352778147;
+    };
   };
 
   system.defaults = {
