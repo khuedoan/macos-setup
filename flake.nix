@@ -22,6 +22,7 @@
         modules = [
           ./configuration.nix
           home-manager.darwinModules.home-manager
+          ./home/khuedoan.nix
         ];
         inputs = { inherit nixpkgs darwin home-manager; };
       };
@@ -30,6 +31,7 @@
         modules = [
           ./configuration.nix
           home-manager.darwinModules.home-manager
+          ./home/kdoan.nix
         ];
         inputs = { inherit nixpkgs darwin home-manager; };
       };
