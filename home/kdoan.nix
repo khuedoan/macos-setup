@@ -19,7 +19,11 @@
       home.packages = with pkgs; [
         argocd
         azure-cli
+        cmctl
         istioctl
+        k9s
+        kubectl-tree
+        kubectx
         sops
         terragrunt
         tflint

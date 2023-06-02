@@ -5,11 +5,13 @@
   # $ nix-env -qaP | grep curl
   environment.systemPackages = with pkgs; [
     aria
+    bat
     cargo
     colima
     curl
     direnv
     docker
+    fd
     fzf
     gh
     git
