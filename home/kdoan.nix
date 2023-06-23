@@ -3,6 +3,7 @@
 {
   homebrew = {
     casks = [
+      "openlens"
       "royal-tsx"
     ];
   };

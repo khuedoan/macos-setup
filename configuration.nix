@@ -111,8 +111,9 @@
     };
   };
 
-  services.karabiner-elements = {
-    enable = true;
+  services = {
+    karabiner-elements.enable = true;
+    tailscale.enable = true;
   };
 
   # Auto upgrade nix package and the daemon service.
