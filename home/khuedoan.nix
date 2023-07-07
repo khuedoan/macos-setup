@@ -1,6 +1,9 @@
 { pkgs, ... }:
 
 {
+  # TODO https://github.com/LnL7/nix-darwin/issues/682
+  users.users.khuedoan.home = "/home/khuedoan";
+
   homebrew = {
     masApps = {
       # Need to be signed into the Mac App Store

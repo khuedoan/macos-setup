@@ -1,6 +1,9 @@
 { pkgs, ... }:
 
 {
+  # TODO https://github.com/LnL7/nix-darwin/issues/682
+  users.users.kdoan.home = "/Users/kdoan";
+
   homebrew = {
     casks = [
       "openlens"
