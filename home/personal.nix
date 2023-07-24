@@ -1,8 +1,11 @@
 { pkgs, ... }:
 
+let
+  username = "khuedoan";
+in
 {
   # TODO https://github.com/LnL7/nix-darwin/issues/682
-  users.users.khuedoan.home = "/home/khuedoan";
+  users.users.${username}.home = "/home/${username}";
 
   homebrew = {
     masApps = {
@@ -19,7 +22,7 @@
   home-manager = {
     useUserPackages = true;
     useGlobalPkgs = true;
-    users.khuedoan = { pkgs, lib, ... }: {
+    users.${username} = { pkgs, lib, ... }: {
       home.stateVersion = "22.11";
       programs.home-manager.enable = true;
       home.file.".config/alacritty/alacritty.yml".text = builtins.readFile ../files/alacritty.yml;
