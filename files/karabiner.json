@@ -29,6 +29,29 @@
                                 "type": "basic"
                             }
                         ]
+                    },
+                    {
+                        "description": "Linux-style keymap for word delete",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "delete",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_control"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_control",
+                                        "modifiers": [
+                                            "left_option"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
                     }
                 ]
             }
