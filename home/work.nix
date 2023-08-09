@@ -31,6 +31,7 @@ in
         k9s
         kubectl-tree
         kubectx
+        kubelogin
         sops
         terragrunt
         tflint
