@@ -28,9 +28,6 @@ in
         azure-cli
         cmctl
         istioctl
-        k9s
-        kubectl-tree
-        kubectx
         kubelogin
         sops
         terragrunt

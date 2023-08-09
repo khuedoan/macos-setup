@@ -19,6 +19,9 @@
     go
     jq
     kubectl
+    k9s
+    kubectl-tree
+    kubectx
     kubernetes-helm
     kustomize
     mosh
