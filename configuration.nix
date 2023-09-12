@@ -18,8 +18,8 @@
     gnupg
     go
     jq
-    kubectl
     k9s
+    kubectl
     kubectl-tree
     kubectx
     kubernetes-helm
@@ -33,6 +33,7 @@
     pinentry
     rbw
     ripgrep
+    rust-analyzer
     tmux
     tree
     unzip
