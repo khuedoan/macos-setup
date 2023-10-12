@@ -9,7 +9,7 @@ in
 
   homebrew = {
     casks = [
-      "openlens"
+      "brave-browser"
       "royal-tsx"
     ];
   };

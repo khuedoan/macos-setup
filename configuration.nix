@@ -72,11 +72,8 @@
     ];
     casks = [
       "alacritty" # TODO https://github.com/neovim/neovim/issues/3344
-      "brave-browser"
-      "firefox"
       "kitty"
       "utm"
-      "visual-studio-code"
       "zerotier-one"
     ];
   };
