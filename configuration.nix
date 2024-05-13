@@ -8,6 +8,7 @@
     bat
     cargo
     colima
+    coreutils
     curl
     direnv
     docker

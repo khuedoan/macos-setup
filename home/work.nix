@@ -9,7 +9,6 @@ in
 
   homebrew = {
     casks = [
-      "brave-browser"
       "royal-tsx"
     ];
   };
@@ -28,6 +27,7 @@ in
         azure-cli
         cmctl
         istioctl
+        jira-cli-go
         kubelogin
         sops
         terragrunt
