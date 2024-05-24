@@ -26,7 +26,7 @@
         ];
         inputs = { inherit nixpkgs darwin home-manager; };
       };
-      "SDL-C715CYXQ92" = darwin.lib.darwinSystem {
+      "AS-C715CYXQ92" = darwin.lib.darwinSystem {
         system = "aarch64-darwin";
         modules = [
           ./configuration.nix
