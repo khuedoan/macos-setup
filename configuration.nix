@@ -66,7 +66,7 @@
     enable = true;
     onActivation.cleanup = "zap";
     taps = [
-      { name = "homebrew/cask"; }
+      # { name = "homebrew/foobar"; }
     ];
     brews = [
       # "foobar"
