@@ -34,12 +34,16 @@
     pinentry
     rbw
     ripgrep
-    rust-analyzer
     tmux
     tree
     unzip
     watch
     zoxide
+
+    # Language server
+    lua-language-server
+    rust-analyzer
+    terraform-ls
 
     (pass.withExtensions (ext: with ext; [
       pass-otp
