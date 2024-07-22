@@ -31,7 +31,7 @@
     nodePackages.npm
     nodePackages.yarn
     nodejs
-    pinentry
+    pinentry-tty
     rbw
     ripgrep
     tmux
