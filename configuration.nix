@@ -40,8 +40,10 @@
     watch
     zoxide
 
-    # Language server
+    # Language servers
+    gopls
     lua-language-server
+    nodePackages.typescript-language-server
     rust-analyzer
     terraform-ls
 
