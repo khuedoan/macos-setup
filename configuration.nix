@@ -81,7 +81,6 @@
       "kitty"
       "linearmouse"
       "utm"
-      "zerotier-one"
     ];
   };
 
