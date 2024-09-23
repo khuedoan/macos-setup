@@ -79,6 +79,7 @@
     casks = [
       "alacritty" # TODO https://github.com/neovim/neovim/issues/3344
       "kitty"
+      "linearmouse"
       "utm"
       "zerotier-one"
     ];
