@@ -22,7 +22,7 @@
         modules = [
           ./configuration.nix
           home-manager.darwinModules.home-manager
-          ./home/personal.nix
+          ./hosts/MacBookAir.nix
         ];
         inputs = { inherit nixpkgs darwin home-manager; };
       };
@@ -31,7 +31,7 @@
         modules = [
           ./configuration.nix
           home-manager.darwinModules.home-manager
-          ./home/work.nix
+          ./hosts/AS-C715CYXQ92.nix
         ];
         inputs = { inherit nixpkgs darwin home-manager; };
       };
