@@ -23,7 +23,6 @@ in
       home.file.".config/karabiner/karabiner.json".text = builtins.readFile ../files/karabiner.json;
       home.packages = with pkgs; [
         argocd
-        azure-cli
         cmctl
         istioctl
         jira-cli-go
