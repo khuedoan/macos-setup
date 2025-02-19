@@ -144,7 +144,6 @@
   nix = {
     # configureBuildUsers = true;
     settings = {
-      auto-optimise-store = true;
       experimental-features = [
         "nix-command"
         "flakes"
@@ -152,6 +151,9 @@
       allowed-users = [
         "@admin"
       ];
+    };
+    optimise = {
+      automatic = true;
     };
   };
 
