@@ -33,6 +33,7 @@
     nodePackages.yarn
     nodejs
     pinentry-tty
+    radicle-node
     rbw
     ripgrep
     tmux
