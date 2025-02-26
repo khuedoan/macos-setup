@@ -10,7 +10,6 @@
     colima
     coreutils
     curl
-    delta
     direnv
     docker
     fd
