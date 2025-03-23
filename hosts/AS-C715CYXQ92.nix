@@ -21,6 +21,7 @@ in
       home.stateVersion = "22.11";
       programs.home-manager.enable = true;
       home.file.".config/karabiner/karabiner.json".text = builtins.readFile ../files/karabiner.json;
+      home.file.".config/kitty/kitty.d/macos.conf".text = builtins.readFile ../files/kitty.conf;
       home.packages = with pkgs; [
         argocd
         cmctl

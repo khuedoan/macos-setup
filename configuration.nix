@@ -92,6 +92,7 @@
       # "foobar"
     ];
     casks = [
+      "kitty"
       "linearmouse"
       "utm"
       "wezterm"
