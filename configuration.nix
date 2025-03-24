@@ -95,7 +95,6 @@
       "kitty"
       "linearmouse"
       "utm"
-      "wezterm"
     ];
   };
 
