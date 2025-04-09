@@ -9,8 +9,9 @@ in
 
   homebrew = {
     casks = [
-      "royal-tsx"
       "brave-browser"
+      "cursor"
+      "royal-tsx"
     ];
   };
 
