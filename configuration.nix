@@ -72,12 +72,8 @@
   ];
 
   fonts = {
-    packages = [
-      (pkgs.nerdfonts.override {
-        fonts = [
-          "FiraCode"
-        ];
-      })
+    packages = with pkgs; [
+      nerd-fonts.fira-code
     ];
   };
 
@@ -137,9 +133,6 @@
     tailscale.enable = true;
   };
 
-  # Auto upgrade nix package and the daemon service.
-  services.nix-daemon.enable = true;
-
   nix = {
     # configureBuildUsers = true;
     settings = {
@@ -170,7 +163,7 @@
     };
   };
 
-  security.pam.enableSudoTouchIdAuth = true;
+  security.pam.services.sudo_local.touchIdAuth = true;
 
   # Used for backwards compatibility, please read the changelog before changing.
   # $ darwin-rebuild changelog
