@@ -7,10 +7,8 @@
     aria
     bat
     cargo
-    colima
     coreutils
     curl
-    docker
     fd
     fzf
     gh
@@ -88,6 +86,7 @@
       # "foobar"
     ];
     casks = [
+      "docker"
       "kitty"
       "linearmouse"
       "utm"
