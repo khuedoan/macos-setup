@@ -11,7 +11,6 @@ in
   homebrew = {
     casks = [
       "diffusionbee"
-      "firefox"
     ];
     masApps = {
       # Need to be signed into the Mac App Store

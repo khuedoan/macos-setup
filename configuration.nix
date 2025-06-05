@@ -90,6 +90,7 @@
       "kitty"
       "linearmouse"
       "utm"
+      "zen-browser"
     ];
   };
 
