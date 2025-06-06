@@ -22,6 +22,7 @@
     kubectx
     kubernetes-helm
     kustomize
+    lima
     mosh
     neovim
     nnn
