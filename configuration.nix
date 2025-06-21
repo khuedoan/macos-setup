@@ -87,11 +87,11 @@
       # "foobar"
     ];
     casks = [
+      "aws-vpn-client"
       "docker"
       "kitty"
       "linearmouse"
       "utm"
-      "zen-browser"
     ];
   };
 
