@@ -30,6 +30,7 @@
     nodePackages.yarn
     nodejs
     pinentry-tty
+    python314
     radicle-node
     rbw
     ripgrep
