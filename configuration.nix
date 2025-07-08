@@ -93,7 +93,6 @@
       "docker"
       "kitty"
       "linearmouse"
-      "lm-studio"
       "utm"
     ];
   };
