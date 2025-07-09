@@ -175,6 +175,8 @@
           alt-shift-9 = "move-node-to-workspace 9";
           alt-shift-0 = "move-node-to-workspace 10";
 
+          alt-tab = "workspace-back-and-forth";
+
           alt-f = "fullscreen --no-outer-gaps";
           alt-shift-f = "layout floating tiling";
           alt-t = "layout tiles h_accordion";
