@@ -186,15 +186,6 @@
         };
 
         automatically-unhide-macos-hidden-apps = true;
-
-        gaps = {
-          inner.horizontal = 10;
-          inner.vertical = 10;
-          outer.left = 10;
-          outer.bottom = 10;
-          outer.top = 10;
-          outer.right = 10;
-        };
       };
     };
   };
