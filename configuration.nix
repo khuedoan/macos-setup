@@ -103,6 +103,7 @@
     };
     dock = {
       autohide = true;
+      expose-group-apps = true;
       minimize-to-application = true;
       mru-spaces = false;
       showhidden = true;
