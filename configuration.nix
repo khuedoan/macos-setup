@@ -12,6 +12,7 @@
     fd
     fzf
     gh
+    ghstack
     git
     gnupg
     go
@@ -34,6 +35,7 @@
     radicle-node
     rbw
     ripgrep
+    sapling
     tmux
     tree
     unzip
