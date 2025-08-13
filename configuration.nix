@@ -92,7 +92,6 @@
       # "foobar"
     ];
     casks = [
-      "alacritty"
       "aws-vpn-client"
       "kitty"
       "linearmouse"
