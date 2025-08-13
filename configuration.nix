@@ -7,8 +7,10 @@
     aria
     bat
     cargo
+    colima
     coreutils
     curl
+    docker
     fd
     fzf
     gh
@@ -92,7 +94,6 @@
     casks = [
       "alacritty"
       "aws-vpn-client"
-      "docker"
       "kitty"
       "linearmouse"
       "utm"
