@@ -90,7 +90,7 @@
       # { name = "homebrew/foobar"; }
     ];
     brews = [
-      # "foobar"
+      "ollama"
     ];
     casks = [
       "aws-vpn-client"
