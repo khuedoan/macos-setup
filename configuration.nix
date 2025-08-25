@@ -94,6 +94,7 @@
     ];
     casks = [
       "aws-vpn-client"
+      "ghostty"
       "kitty"
       "linearmouse"
       "utm"
@@ -190,6 +191,9 @@
         };
 
         automatically-unhide-macos-hidden-apps = true;
+        # TODO currently disable padding so Ghostty doesn't jump around
+        # https://ghostty.org/docs/help/macos-tiling-wms
+        accordion-padding = 0;
       };
     };
   };
