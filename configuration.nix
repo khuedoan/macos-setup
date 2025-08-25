@@ -98,6 +98,7 @@
       "kitty"
       "linearmouse"
       "utm"
+      "zen"
     ];
   };
 
