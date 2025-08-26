@@ -34,7 +34,7 @@ in
         jira-cli-go
         kubelogin
         sops
-        terragrunt
+        tenv
         tflint
         yq-go
       ];
