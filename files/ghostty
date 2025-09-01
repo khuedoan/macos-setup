@@ -1,4 +1,5 @@
 font-family = "FiraCode Nerd Font Mono Med"
+font-feature = -calt
 
 background = #282c34
 foreground = #abb2bf
