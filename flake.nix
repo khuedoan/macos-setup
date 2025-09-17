@@ -26,12 +26,12 @@
         ];
         inputs = { inherit nixpkgs darwin home-manager; };
       };
-      "AS-C715CYXQ92" = darwin.lib.darwinSystem {
+      "AS-GXL19NXYYQ" = darwin.lib.darwinSystem {
         system = "aarch64-darwin";
         modules = [
           ./configuration.nix
           home-manager.darwinModules.home-manager
-          ./hosts/AS-C715CYXQ92.nix
+          ./hosts/AS-GXL19NXYYQ.nix
         ];
         inputs = { inherit nixpkgs darwin home-manager; };
       };
