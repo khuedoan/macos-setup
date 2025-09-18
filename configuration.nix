@@ -94,7 +94,6 @@
     ];
     casks = [
       "aws-vpn-client"
-      "ghostty"
       "kitty"
       "linearmouse"
       "utm"
