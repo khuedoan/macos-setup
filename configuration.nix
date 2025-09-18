@@ -4,7 +4,6 @@
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep curl
   environment.systemPackages = with pkgs; [
-    acr-cli
     aria
     bat
     cargo
@@ -35,7 +34,6 @@
     nodejs
     pinentry-tty
     python314
-    radicle-node
     rbw
     ripgrep
     sapling
@@ -55,21 +53,9 @@
     terraform-ls
 
     (pass.withExtensions (ext: with ext; [
+      pass-import
       pass-otp
     ]))
-  ];
-
-  # TODO remove this https://github.com/LnL7/nix-darwin/issues/1041
-  nixpkgs.overlays = [
-    (self: super: {
-      karabiner-elements = super.karabiner-elements.overrideAttrs (old: {
-        version = "14.13.0";
-        src = super.fetchurl {
-          inherit (old.src) url;
-          hash = "sha256-gmJwoht/Tfm5qMecmq1N6PSAIfWOqsvuHU8VDJY8bLw=";
-        };
-      });
-    })
   ];
 
   environment.systemPath = [
@@ -137,7 +123,9 @@
   };
 
   services = {
-    karabiner-elements.enable = true;
+    # TODO some machine have the driver blocked, needs to install from the web
+    # And Karabiner on nix-darwin is currently broken https://github.com/LnL7/nix-darwin/issues/1041
+    # karabiner-elements.enable = true;
     tailscale.enable = true;
   };
 
