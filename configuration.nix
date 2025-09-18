@@ -79,7 +79,6 @@
       "ollama"
     ];
     casks = [
-      "aws-vpn-client"
       "kitty"
       "linearmouse"
       "utm"

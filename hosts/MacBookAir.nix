@@ -6,7 +6,7 @@ in
 {
   system.primaryUser = username;
   # TODO https://github.com/LnL7/nix-darwin/issues/682
-  users.users.${username}.home = "/home/${username}";
+  users.users.${username}.home = "/Users/${username}";
 
   homebrew = {
     casks = [
