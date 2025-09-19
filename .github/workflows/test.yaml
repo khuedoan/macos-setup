@@ -13,9 +13,13 @@ jobs:
       - uses: actions/checkout@v4
       - run: make /nix
       - run: make /opt/homebrew/bin/brew
-      - run: |
+      - name: darwin-rebuild
+        env:
+          NIX_CONFIG: access-tokens = github.com=${{ github.token }}
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
           sudo /nix/var/nix/profiles/default/bin/nix \
-             --experimental-features 'nix-command flakes' \
+            --experimental-features 'nix-command flakes' \
             run \
             nix-darwin/nix-darwin-25.05#darwin-rebuild \
             -- \
