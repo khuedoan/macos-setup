@@ -1,0 +1,24 @@
+name: Test
+
+on:
+  workflow_dispatch: {}
+  push:
+    branches:
+      - master
+
+jobs:
+  darwin-rebuild:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      # TODO find a way to make this consistent with the Makefile
+      - run: make /nix
+      - run: make /opt/homebrew/bin/brew
+      - name: darwin-rebuild
+        run: |
+          sudo /nix/var/nix/profiles/default/bin/nix \
+            --experimental-features 'nix-command flakes' \
+            run \
+            'git+https://github.com/nix-darwin/nix-darwin.git?ref=nix-darwin-25.05#darwin-rebuild' \
+            -- \
+            switch --flake .#test
