@@ -18,6 +18,7 @@
     git
     gnupg
     go
+    imagemagick
     jq
     k9s
     kubectl

@@ -10,6 +10,7 @@ in
 
   homebrew = {
     casks = [
+      "iina"
       "signal"
       "steam"
     ];
