@@ -82,6 +82,7 @@
     casks = [
       "kitty"
       "linearmouse"
+      "secretive"
       "utm"
       "zen"
     ];
