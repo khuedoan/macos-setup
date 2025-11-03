@@ -19,6 +19,7 @@
     gnupg
     go
     imagemagick
+    inetutils
     jq
     k9s
     kubectl
