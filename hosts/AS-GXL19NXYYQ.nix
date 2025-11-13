@@ -35,6 +35,7 @@ in
         jira-cli-go
         kubelogin
         sops
+        ssm-session-manager-plugin
         tenv
         tflint
         yq-go
