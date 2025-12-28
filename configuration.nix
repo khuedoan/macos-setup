@@ -31,9 +31,6 @@
     mosh
     neovim
     nnn
-    nodePackages.npm
-    nodePackages.yarn
-    nodejs
     pinentry-tty
     python314
     rbw
