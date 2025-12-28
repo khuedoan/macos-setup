@@ -4,7 +4,7 @@
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep curl
   environment.systemPackages = with pkgs; [
-    aria
+    aria2
     bat
     cargo
     colima
@@ -90,9 +90,6 @@
   };
 
   system.defaults = {
-    alf = {
-      globalstate = 1;
-    };
     dock = {
       autohide = true;
       expose-group-apps = true;
