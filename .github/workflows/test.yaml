@@ -14,6 +14,10 @@ jobs:
       # TODO find a way to make this consistent with the Makefile
       - run: make /nix
       - run: make /opt/homebrew/bin/brew
+      - name: before-nix-darwin-overwrite
+        run: |
+          sudo mv /etc/bashrc /etc/bashrc.before-nix-darwin
+          sudo mv /etc/zshrc /etc/zshrc.before-nix-darwin
       - name: darwin-rebuild
         run: |
           sudo /nix/var/nix/profiles/default/bin/nix \
