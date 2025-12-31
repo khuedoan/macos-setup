@@ -25,7 +25,7 @@ build: /nix /opt/homebrew/bin/brew ~/.git
 	sudo /nix/var/nix/profiles/default/bin/nix \
 		 --experimental-features 'nix-command flakes' \
 		run \
-		nix-darwin/nix-darwin-25.05#darwin-rebuild \
+		nix-darwin/nix-darwin-25.11#darwin-rebuild \
 		-- \
 		switch --flake .
 
