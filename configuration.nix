@@ -28,6 +28,7 @@
     kubernetes-helm
     kustomize
     lima
+    markdown-oxide
     mosh
     neovim
     nnn
