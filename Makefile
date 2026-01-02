@@ -10,10 +10,7 @@ default: build
 	curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh -o /tmp/brew-install.sh
 	NONINTERACTIVE=1 bash /tmp/brew-install.sh
 
-~/.ssh/id_ed25519:
-	ssh-keygen -t ed25519 -f "$@"
-
-~/.git: ~/.ssh/id_ed25519
+~/.git:
 	cd ~ \
 		&& git init \
 		&& git config status.showUntrackedFiles no \
