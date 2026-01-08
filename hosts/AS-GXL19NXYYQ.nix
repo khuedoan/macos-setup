@@ -9,6 +9,12 @@ in
   users.users.${username}.home = "/Users/${username}";
 
   homebrew = {
+    taps = [
+      { name = "atlassian/homebrew-acli"; }
+    ];
+    brews = [
+      "acli"
+    ];
     casks = [
       "aws-vpn-client"
       "brave-browser"
@@ -34,6 +40,7 @@ in
         istioctl
         jira-cli-go
         kubelogin
+        prometheus.cli
         sops
         ssm-session-manager-plugin
         tenv
