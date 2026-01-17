@@ -5,6 +5,9 @@
     nixpkgs = {
       url = "github:nixos/nixpkgs/nixpkgs-25.11-darwin";
     };
+    nixpkgs-unstable = {
+      url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    };
     darwin = {
       url = "github:lnl7/nix-darwin/nix-darwin-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -15,10 +18,17 @@
     };
   };
 
-  outputs = { self, nixpkgs, darwin, home-manager }: {
+  outputs = { self, nixpkgs, nixpkgs-unstable, darwin, home-manager }:
+  let
+    pkgs-unstable = import nixpkgs-unstable {
+      system = "aarch64-darwin";
+    };
+  in
+  {
     darwinConfigurations = {
       "MacBookAir" = darwin.lib.darwinSystem {
         system = "aarch64-darwin";
+        specialArgs = { inherit pkgs-unstable; };
         modules = [
           ./configuration.nix
           home-manager.darwinModules.home-manager
@@ -28,6 +38,7 @@
       };
       "MacBookPro" = darwin.lib.darwinSystem {
         system = "aarch64-darwin";
+        specialArgs = { inherit pkgs-unstable; };
         modules = [
           ./configuration.nix
           home-manager.darwinModules.home-manager
@@ -37,6 +48,7 @@
       };
       "AS-GXL19NXYYQ" = darwin.lib.darwinSystem {
         system = "aarch64-darwin";
+        specialArgs = { inherit pkgs-unstable; };
         modules = [
           ./configuration.nix
           home-manager.darwinModules.home-manager
@@ -46,6 +58,7 @@
       };
       "test" = darwin.lib.darwinSystem {
         system = "aarch64-darwin";
+        specialArgs = { inherit pkgs-unstable; };
         modules = [
           ./configuration.nix
           home-manager.darwinModules.home-manager
