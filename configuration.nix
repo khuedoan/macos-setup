@@ -5,12 +5,14 @@
   # $ nix-env -qaP | grep curl
   environment.systemPackages = with pkgs; [
     aria2
+    backblaze-b2
     bat
     cargo
     colima
     coreutils
     curl
     docker
+    dyff
     fd
     fzf
     gh
