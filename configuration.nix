@@ -58,6 +58,9 @@
       pass-import
       pass-otp
     ]))
+
+    # Unstable
+    pkgs-unstable.opencode
   ];
 
   environment.systemPath = [
