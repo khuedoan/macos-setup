@@ -54,13 +54,14 @@
     rust-analyzer
     terraform-ls
 
+    # AI
+    pkgs-unstable.opencode
+    pkgs-unstable.playwright-mcp
+
     (pass.withExtensions (ext: with ext; [
       pass-import
       pass-otp
     ]))
-
-    # Unstable
-    pkgs-unstable.opencode
   ];
 
   environment.systemPath = [
