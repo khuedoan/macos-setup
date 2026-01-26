@@ -56,6 +56,7 @@
 
     # AI
     pkgs-unstable.opencode
+    pkgs-unstable.codex
     pkgs-unstable.playwright-mcp
 
     (pass.withExtensions (ext: with ext; [

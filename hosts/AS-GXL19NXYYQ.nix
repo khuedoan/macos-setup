@@ -18,6 +18,7 @@ in
     casks = [
       "aws-vpn-client"
       "brave-browser"
+      "claude-code"
       "cursor"
       "royal-tsx"
     ];
