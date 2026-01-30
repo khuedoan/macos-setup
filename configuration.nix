@@ -43,6 +43,7 @@
     tree
     unzip
     watch
+    yt-dlp
     zoxide
 
     # Language servers
