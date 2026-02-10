@@ -87,8 +87,10 @@
       "ollama"
     ];
     casks = [
+      "handy"
       "kitty"
       "linearmouse"
+      "obsidian"
       "secretive"
       "utm"
       "zen"
