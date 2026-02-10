@@ -14,7 +14,6 @@ in
       "discord"
       "iina"
       "signal"
-      "steam"
     ];
     masApps = {
       # Need to be signed into the Mac App Store
