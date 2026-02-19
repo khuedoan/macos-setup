@@ -87,6 +87,7 @@
       "ollama"
     ];
     casks = [
+      "ghostty"
       "handy"
       "kitty"
       "linearmouse"
