@@ -44,6 +44,7 @@
     unzip
     watch
     yt-dlp
+    zk
     zoxide
 
     # Language servers
