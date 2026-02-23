@@ -35,6 +35,7 @@
     neovim
     nnn
     pinentry-tty
+    poppler-utils
     python314
     rbw
     ripgrep
