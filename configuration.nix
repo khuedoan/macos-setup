@@ -61,6 +61,7 @@
     pkgs-unstable.opencode
     pkgs-unstable.codex
     pkgs-unstable.playwright-mcp
+    pkgs-unstable.mcp-grafana
 
     (pass.withExtensions (ext: with ext; [
       pass-import
