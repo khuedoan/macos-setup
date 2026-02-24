@@ -160,10 +160,10 @@
       enable = true;
       config = {
         virtualisation = {
-          cores = 8;
+          cores = 4;
           darwin-builder = {
-            diskSize = 128 * 1024;
-            memorySize = 16 * 1024;
+            diskSize = 64 * 1024;
+            memorySize = 8 * 1024;
           };
         };
       };
