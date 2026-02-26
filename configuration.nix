@@ -7,6 +7,7 @@
     aria2
     backblaze-b2
     bat
+    btop
     cargo
     colima
     coreutils
