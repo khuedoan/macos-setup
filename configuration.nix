@@ -9,7 +9,7 @@
     bat
     btop
     cargo
-    colima
+    pkgs-unstable.colima # TODO temp fix for deprecated lima
     coreutils
     curl
     docker
@@ -30,7 +30,6 @@
     kubectx
     kubernetes-helm
     kustomize
-    lima
     markdown-oxide
     mosh
     neovim
