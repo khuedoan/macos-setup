@@ -43,6 +43,7 @@
     tmux
     tree
     unzip
+    uv
     watch
     yt-dlp
     zk
