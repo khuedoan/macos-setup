@@ -17,7 +17,6 @@ in
     ];
     casks = [
       "aws-vpn-client"
-      "brave-browser"
       "claude"
       "claude-code"
       "cursor"

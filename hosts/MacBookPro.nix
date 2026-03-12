@@ -10,7 +10,6 @@ in
 
   homebrew = {
     casks = [
-      "brave-browser"
       "discord"
       "iina"
       "signal"
