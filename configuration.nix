@@ -163,7 +163,9 @@
     };
     linux-builder = {
       enable = true;
+      systems = ["aarch64-linux" "x86_64-linux"];
       config = {
+        boot.binfmt.emulatedSystems = ["x86_64-linux"];
         virtualisation = {
           cores = 4;
           darwin-builder = {
