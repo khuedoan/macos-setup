@@ -93,7 +93,6 @@
     casks = [
       "brave-browser"
       "codex-app"
-      "ghostty"
       "handy"
       "helium-browser"
       "kitty"
