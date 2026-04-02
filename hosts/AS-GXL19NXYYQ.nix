@@ -17,8 +17,6 @@ in
     ];
     casks = [
       "aws-vpn-client"
-      "claude"
-      "claude-code"
       "cursor"
       "royal-tsx"
     ];
