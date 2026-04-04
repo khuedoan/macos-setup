@@ -32,7 +32,7 @@
     kustomize
     markdown-oxide
     mosh
-    neovim
+    pkgs-unstable.neovim # TOOD back to stable once 0.12 is available
     nnn
     pinentry-tty
     poppler-utils
