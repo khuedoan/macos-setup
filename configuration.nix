@@ -1,4 +1,4 @@
-{ config, pkgs, pkgs-unstable, ... }:
+{ config, pkgs, ... }:
 
 {
   # List packages installed in system profile. To search by name, run:
@@ -9,7 +9,7 @@
     bat
     btop
     cargo
-    pkgs-unstable.colima # TODO temp fix for deprecated lima
+    unstable.colima # TODO temp fix for deprecated lima
     coreutils
     curl
     docker
@@ -32,7 +32,7 @@
     kustomize
     markdown-oxide
     mosh
-    pkgs-unstable.neovim # TOOD back to stable once 0.12 is available
+    unstable.neovim # TOOD back to stable once 0.12 is available
     nnn
     pinentry-tty
     poppler-utils
@@ -59,10 +59,10 @@
     terraform-ls
 
     # AI
-    pkgs-unstable.opencode
-    pkgs-unstable.codex
-    pkgs-unstable.playwright-mcp
-    pkgs-unstable.mcp-grafana
+    unstable.opencode
+    unstable.codex
+    unstable.playwright-mcp
+    unstable.mcp-grafana
 
     (pass.withExtensions (ext: with ext; [
       pass-import

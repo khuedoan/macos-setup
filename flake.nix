@@ -20,48 +20,46 @@
 
   outputs = { self, nixpkgs, nixpkgs-unstable, darwin, home-manager }:
   let
-    pkgs-unstable = import nixpkgs-unstable {
-      system = "aarch64-darwin";
-    };
-  in
-  {
+    baseModules = [
+      ./configuration.nix
+      home-manager.darwinModules.home-manager
+      {
+        nixpkgs.overlays = [
+          (final: prev: {
+            unstable = import nixpkgs-unstable {
+              inherit (prev.stdenv.hostPlatform) system;
+              config = prev.config;
+            };
+          })
+        ];
+      }
+    ];
+  in {
     darwinConfigurations = {
       "MacBookAir" = darwin.lib.darwinSystem {
         system = "aarch64-darwin";
-        specialArgs = { inherit pkgs-unstable; };
-        modules = [
-          ./configuration.nix
-          home-manager.darwinModules.home-manager
+        modules = baseModules ++ [
           ./hosts/MacBookAir.nix
         ];
         inputs = { inherit nixpkgs darwin home-manager; };
       };
       "MacBookPro" = darwin.lib.darwinSystem {
         system = "aarch64-darwin";
-        specialArgs = { inherit pkgs-unstable; };
-        modules = [
-          ./configuration.nix
-          home-manager.darwinModules.home-manager
+        modules = baseModules ++ [
           ./hosts/MacBookPro.nix
         ];
         inputs = { inherit nixpkgs darwin home-manager; };
       };
       "AS-GXL19NXYYQ" = darwin.lib.darwinSystem {
         system = "aarch64-darwin";
-        specialArgs = { inherit pkgs-unstable; };
-        modules = [
-          ./configuration.nix
-          home-manager.darwinModules.home-manager
+        modules = baseModules ++ [
           ./hosts/AS-GXL19NXYYQ.nix
         ];
         inputs = { inherit nixpkgs darwin home-manager; };
       };
       "test" = darwin.lib.darwinSystem {
         system = "aarch64-darwin";
-        specialArgs = { inherit pkgs-unstable; };
-        modules = [
-          ./configuration.nix
-          home-manager.darwinModules.home-manager
+        modules = baseModules ++ [
           ./hosts/test.nix
         ];
         inputs = { inherit nixpkgs darwin home-manager; };
