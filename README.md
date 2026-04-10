@@ -9,8 +9,19 @@
 
 ## Usage
 
-- Change the hostname and username in `./flake.nix` and `./hosts/*.nix`
-- Go to **Settings -> Security & Privacy -> Privacy -> Full Disk Access** and allow the Terminal app
+### Customize the configuration
+
+Review all files and adjust the configurations to suit your needs. At a
+minimum, you’ll need to change the following:
+
+- Users:
+    - Replace `khuedoan`, `kdoan` and `runner` with your usernames in `./users/*`.
+    - Replace `khuedoan/dotfiles` with your dotfiles repository, or use `home-manager` to manage all dotfiles.
+- Hosts:
+    - Replace the hostnames in `./flake.nix`.
+    - Adjust per-host settings in `./hosts/*`.
+
+Go to **Settings -> Security & Privacy -> Privacy -> Full Disk Access** and allow the Terminal app.
 
 ```sh
 git clone https://github.com/khuedoan/macos-setup macos-setup

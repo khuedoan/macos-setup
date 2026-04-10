@@ -34,35 +34,36 @@
         ];
       }
     ];
+    mkDarwinConfiguration = { system, userModule, hostModule }:
+      darwin.lib.darwinSystem {
+        inherit system;
+        modules = baseModules ++ [
+          userModule
+          hostModule
+        ];
+        inputs = { inherit nixpkgs darwin home-manager; };
+      };
   in {
     darwinConfigurations = {
-      "MacBookAir" = darwin.lib.darwinSystem {
+      "MacBookAir" = mkDarwinConfiguration {
         system = "aarch64-darwin";
-        modules = baseModules ++ [
-          ./hosts/MacBookAir.nix
-        ];
-        inputs = { inherit nixpkgs darwin home-manager; };
+        userModule = ./users/khuedoan;
+        hostModule = ./hosts/MacBookAir;
       };
-      "MacBookPro" = darwin.lib.darwinSystem {
+      "MacBookPro" = mkDarwinConfiguration {
         system = "aarch64-darwin";
-        modules = baseModules ++ [
-          ./hosts/MacBookPro.nix
-        ];
-        inputs = { inherit nixpkgs darwin home-manager; };
+        userModule = ./users/khuedoan;
+        hostModule = ./hosts/MacBookPro;
       };
-      "AS-GXL19NXYYQ" = darwin.lib.darwinSystem {
+      "AS-GXL19NXYYQ" = mkDarwinConfiguration {
         system = "aarch64-darwin";
-        modules = baseModules ++ [
-          ./hosts/AS-GXL19NXYYQ.nix
-        ];
-        inputs = { inherit nixpkgs darwin home-manager; };
+        userModule = ./users/kdoan;
+        hostModule = ./hosts/AS-GXL19NXYYQ;
       };
-      "test" = darwin.lib.darwinSystem {
+      "test" = mkDarwinConfiguration {
         system = "aarch64-darwin";
-        modules = baseModules ++ [
-          ./hosts/test.nix
-        ];
-        inputs = { inherit nixpkgs darwin home-manager; };
+        userModule = ./users/runner;
+        hostModule = ./hosts/test;
       };
     };
   };
