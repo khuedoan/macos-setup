@@ -63,6 +63,7 @@
     unstable.codex
     unstable.playwright-mcp
     unstable.mcp-grafana
+    unstable.agent-browser
 
     (pass.withExtensions (ext: with ext; [
       pass-import
