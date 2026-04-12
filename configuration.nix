@@ -61,7 +61,6 @@
     # AI
     unstable.opencode
     unstable.codex
-    unstable.playwright-mcp
     unstable.mcp-grafana
     unstable.agent-browser
 
