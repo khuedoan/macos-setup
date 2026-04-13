@@ -61,6 +61,7 @@
     # AI
     unstable.opencode
     unstable.codex
+    unstable.pi-coding-agent
     unstable.mcp-grafana
     unstable.agent-browser
 
