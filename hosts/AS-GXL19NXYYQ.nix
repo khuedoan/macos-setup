@@ -17,6 +17,7 @@ in
     ];
     casks = [
       "aws-vpn-client"
+      "claude"
       "cursor"
       "cursor-cli"
       "royal-tsx"
@@ -37,6 +38,7 @@ in
         awscli2
         azure-cli
         cmctl
+        granted
         istioctl
         jira-cli-go
         kubelogin
