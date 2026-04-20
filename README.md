@@ -9,7 +9,7 @@
 
 ## Usage
 
-- Change the hostname and username in `./flake.nix` and `./hosts/*.nix`
+- Change the hostname and username in `./flake.nix` and `./users/`
 - Go to **Settings -> Security & Privacy -> Privacy -> Full Disk Access** and allow the Terminal app
 
 ```sh
