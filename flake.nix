@@ -52,7 +52,21 @@
       };
       "test" = darwin.lib.darwinSystem {
         system = "aarch64-darwin";
-        modules = baseModules;
+        modules = baseModules ++ [
+          {
+            # User in GitHub Actions runner
+            system.primaryUser = "runner";
+            users.users.runner.home = "/Users/runner";
+            home-manager = {
+              useUserPackages = true;
+              useGlobalPkgs = true;
+              users.runner = { pkgs, ... }: {
+                home.stateVersion = "25.11";
+                programs.home-manager.enable = true;
+              };
+            };
+          }
+        ];
         inputs = { inherit nixpkgs darwin home-manager; };
       };
     };
