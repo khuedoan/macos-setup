@@ -13,6 +13,7 @@ jobs:
       - uses: actions/checkout@v4
       # TODO find a way to make this consistent with the Makefile
       - run: make /nix
+      - uses: DeterminateSystems/magic-nix-cache-action@main
       - run: make /opt/homebrew/bin/brew
       - name: before-nix-darwin-overwrite
         run: |
