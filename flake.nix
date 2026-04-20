@@ -36,13 +36,6 @@
     ];
   in {
     darwinConfigurations = {
-      "MacBookAir" = darwin.lib.darwinSystem {
-        system = "aarch64-darwin";
-        modules = baseModules ++ [
-          ./hosts/MacBookAir.nix
-        ];
-        inputs = { inherit nixpkgs darwin home-manager; };
-      };
       "MacBookPro" = darwin.lib.darwinSystem {
         system = "aarch64-darwin";
         modules = baseModules ++ [
