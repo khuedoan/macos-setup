@@ -39,21 +39,21 @@
       "MacBookPro" = darwin.lib.darwinSystem {
         system = "aarch64-darwin";
         modules = baseModules ++ [
-          ./hosts/MacBookPro.nix
+          ./hosts/MacBookPro
         ];
         inputs = { inherit nixpkgs darwin home-manager; };
       };
       "AS-GXL19NXYYQ" = darwin.lib.darwinSystem {
         system = "aarch64-darwin";
         modules = baseModules ++ [
-          ./hosts/AS-GXL19NXYYQ.nix
+          ./hosts/AS-GXL19NXYYQ
         ];
         inputs = { inherit nixpkgs darwin home-manager; };
       };
       "test" = darwin.lib.darwinSystem {
         system = "aarch64-darwin";
         modules = baseModules ++ [
-          ./hosts/test.nix
+          ./hosts/test
         ];
         inputs = { inherit nixpkgs darwin home-manager; };
       };
