@@ -57,6 +57,8 @@
             # User in GitHub Actions runner
             system.primaryUser = "runner";
             users.users.runner.home = "/Users/runner";
+            # TODO not sure why Linux builder doesn't work yet, likely due to bootstrapping
+            nix.linux-builder.enable = nixpkgs.lib.mkForce false;
             home-manager = {
               useUserPackages = true;
               useGlobalPkgs = true;
