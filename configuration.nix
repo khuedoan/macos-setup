@@ -94,7 +94,6 @@
     casks = [
       "brave-browser"
       "claude-code"
-      "codex-app"
       "handy"
       "helium-browser"
       "kitty"
